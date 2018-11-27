@@ -8,6 +8,7 @@ pod 'SDCycleScrollView'
 pod 'MBProgressHUD'
 pod 'GKNavigationController'
 pod 'AAChartKit'
+pod 'SDAutoLayout'
 end
 
 

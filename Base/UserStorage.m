@@ -9,8 +9,8 @@
 #import "UserStorage.h"
 
 static NSString * userKey = @"userKey_____HC";
-static  UserStorage * _instance = nil;
-static NSString * userPath = @"/Documents/userData_HC_";
+static UserStorage * _instance = nil;
+static NSString * storageSubPath = @"/Documents/userData_HC_";
 
 @implementation UserModel
 
@@ -25,7 +25,7 @@ static NSString * userPath = @"/Documents/userData_HC_";
     dispatch_once(&onceToken, ^{
         _instance =  [[self alloc]init];
         NSString * homedirectorypath =NSHomeDirectory();
-        NSString * storagePath =[homedirectorypath stringByAppendingString:userPath];
+        NSString * storagePath =[homedirectorypath stringByAppendingString:storageSubPath];
         _instance.storage = [[YYKVStorage alloc]initWithPath:storagePath type:YYKVStorageTypeMixed];
         NSLog(@"%@",storagePath);
     }) ;

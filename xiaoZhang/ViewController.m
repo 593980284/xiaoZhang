@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "UserStorage.h"
 @interface ViewController ()
 
 @end
