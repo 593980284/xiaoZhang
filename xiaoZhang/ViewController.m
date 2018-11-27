@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "UserStorage.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [[UserStorage shareInstance] saveUserData:@{@"phone": @"1223445"}];
+    UserModel * model =  [[UserStorage shareInstance] getUserModel];
+    NSLog(@"%@",model.phone);
+    [[UserStorage shareInstance] removeUserData];
+     NSLog(@"%@",model.phone);
 }
 
 
