@@ -1,0 +1,58 @@
+PODS:
+  - AAChartKit (2.1.6)
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - GKNavigationController (1.0.4)
+  - MBProgressHUD (1.1.0)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AAChartKit
+  - AFNetworking
+  - GKNavigationController
+  - MBProgressHUD
+  - SDCycleScrollView
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AAChartKit
+    - AFNetworking
+    - GKNavigationController
+    - MBProgressHUD
+    - SDCycleScrollView
+    - SDWebImage
+    - YYKit
+
+SPEC CHECKSUMS:
+  AAChartKit: adc0da2830cfc7dd8e9a0a706413eec9598e004d
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  GKNavigationController: de93bb4d1514dd4a124d5c253774ed06fb65e86c
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 2a13928273e870fa99a1848dbe08127deb33cf9b
+
+COCOAPODS: 1.5.3

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09DA4B554FF6CDBB79AD39B0 /* libPods-xiaoZhang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AD148538692D278D7067B0 /* libPods-xiaoZhang.a */; };
 		CD12CEA521AD65A300EFFC56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD12CEA421AD65A300EFFC56 /* AppDelegate.m */; };
 		CD12CEA821AD65A300EFFC56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD12CEA721AD65A300EFFC56 /* ViewController.m */; };
 		CD12CEAB21AD65A300EFFC56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD12CEA921AD65A300EFFC56 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		CD12CEB321AD65A900EFFC56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD12CEB221AD65A900EFFC56 /* main.m */; };
 		CD12CEBD21AD65A900EFFC56 /* xiaoZhangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD12CEBC21AD65A900EFFC56 /* xiaoZhangTests.m */; };
 		CD12CEC821AD65AA00EFFC56 /* xiaoZhangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD12CEC721AD65AA00EFFC56 /* xiaoZhangUITests.m */; };
+		CD12CED821AD6B5000EFFC56 /* JHGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD12CED721AD6B5000EFFC56 /* JHGridView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80AD148538692D278D7067B0 /* libPods-xiaoZhang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xiaoZhang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9851A7A6BF6236B94E51B883 /* Pods-xiaoZhang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaoZhang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang.debug.xcconfig"; sourceTree = "<group>"; };
 		CD12CEA021AD65A300EFFC56 /* xiaoZhang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoZhang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD12CEA321AD65A300EFFC56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD12CEA421AD65A300EFFC56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +55,9 @@
 		CD12CEC321AD65AA00EFFC56 /* xiaoZhangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaoZhangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD12CEC721AD65AA00EFFC56 /* xiaoZhangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaoZhangUITests.m; sourceTree = "<group>"; };
 		CD12CEC921AD65AA00EFFC56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD12CED621AD6B5000EFFC56 /* JHGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHGridView.h; sourceTree = "<group>"; };
+		CD12CED721AD6B5000EFFC56 /* JHGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHGridView.m; sourceTree = "<group>"; };
+		E9DBF2627960920BBC44DAB3 /* Pods-xiaoZhang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaoZhang.release.xcconfig"; path = "Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DA4B554FF6CDBB79AD39B0 /* libPods-xiaoZhang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +86,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3269EC6602FAB22A317A6CF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9851A7A6BF6236B94E51B883 /* Pods-xiaoZhang.debug.xcconfig */,
+				E9DBF2627960920BBC44DAB3 /* Pods-xiaoZhang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E82BA052C22D05FCDF23A63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80AD148538692D278D7067B0 /* libPods-xiaoZhang.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD12CE9721AD65A300EFFC56 = {
 			isa = PBXGroup;
 			children = (
+				CD12CED521AD6B5000EFFC56 /* JHGridView */,
 				CD12CEA221AD65A300EFFC56 /* xiaoZhang */,
 				CD12CEBB21AD65A900EFFC56 /* xiaoZhangTests */,
 				CD12CEC621AD65AA00EFFC56 /* xiaoZhangUITests */,
 				CD12CEA121AD65A300EFFC56 /* Products */,
+				3269EC6602FAB22A317A6CF9 /* Pods */,
+				4E82BA052C22D05FCDF23A63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +160,15 @@
 			path = xiaoZhangUITests;
 			sourceTree = "<group>";
 		};
+		CD12CED521AD6B5000EFFC56 /* JHGridView */ = {
+			isa = PBXGroup;
+			children = (
+				CD12CED621AD6B5000EFFC56 /* JHGridView.h */,
+				CD12CED721AD6B5000EFFC56 /* JHGridView.m */,
+			);
+			path = JHGridView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD12CECC21AD65AA00EFFC56 /* Build configuration list for PBXNativeTarget "xiaoZhang" */;
 			buildPhases = (
+				18BD6D425A835711C82368E1 /* [CP] Check Pods Manifest.lock */,
 				CD12CE9C21AD65A300EFFC56 /* Sources */,
 				CD12CE9D21AD65A300EFFC56 /* Frameworks */,
 				CD12CE9E21AD65A300EFFC56 /* Resources */,
+				454C3629AD7E37718E4BE05E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +296,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18BD6D425A835711C82368E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xiaoZhang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		454C3629AD7E37718E4BE05E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/AAChartKit/AAChartKitLib.bundle",
+				"${PODS_ROOT}/GKNavigationController/GKNavigationController/Resource",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AAChartKitLib.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resource",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD12CE9C21AD65A300EFFC56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +352,7 @@
 			files = (
 				CD12CEA821AD65A300EFFC56 /* ViewController.m in Sources */,
 				CD12CEB321AD65A900EFFC56 /* main.m in Sources */,
+				CD12CED821AD6B5000EFFC56 /* JHGridView.m in Sources */,
 				CD12CEA521AD65A300EFFC56 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +522,7 @@
 		};
 		CD12CECD21AD65AA00EFFC56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9851A7A6BF6236B94E51B883 /* Pods-xiaoZhang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +539,7 @@
 		};
 		CD12CECE21AD65AA00EFFC56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9DBF2627960920BBC44DAB3 /* Pods-xiaoZhang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
