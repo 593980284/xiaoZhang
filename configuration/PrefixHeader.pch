@@ -18,4 +18,6 @@
 #import "UserStorage.h"//用户信息本地缓存
 #import "Constant.h"//常量宏定义-域名、appkey等
 #import "ToolMacro.h"//宏定义-屏幕宽高、s系统版本、phonex判断、等
+#import "MBProgressHUD+PD.h"
+#import "NetWorkTool.h"
 #endif /* PrefixHeader_pch */

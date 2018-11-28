@@ -8,6 +8,13 @@
 
 #ifndef Constant_h
 #define Constant_h
-
+//处于开发测试阶段
+#ifdef DEBUG
+#define kBaseUrl @"http://111.39.245.156:8087/app/lexiang/"
+//处于发布正式阶段
+#else
+#define kBaseUrl @"http://112.2.0.75:9001/app/lexiang/"
+#endif
 
 #endif /* Constant_h */
+

@@ -8,6 +8,7 @@
 
 #import "HomeVC.h"
 #import "DemoVC.h"
+#import "LoginApi.h"
 @interface HomeVC ()
 
 @end
@@ -22,7 +23,12 @@
     self.gk_navBarAlpha = 0.5;
     view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:view];
-
+    NSLog(@"%@",LoginApi_login);
+    [NetWorkTool requestWithURL:LoginApi_login params:@{} toModel:nil success:^(id result) {
+        
+    } failure:^(NSString *msg, NSInteger code) {
+        
+    } showLoading:@"加载。。"];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

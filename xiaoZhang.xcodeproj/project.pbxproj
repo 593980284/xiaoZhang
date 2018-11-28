@@ -17,6 +17,10 @@
 		CD10319321AE66080017440A /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10318F21AE66080017440A /* LoginVC.m */; };
 		CD10319A21AE66370017440A /* mineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10319921AE66370017440A /* mineVC.m */; };
 		CD10319D21AE67D30017440A /* DemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10319C21AE67D30017440A /* DemoVC.m */; };
+		CD1031F321AEB6EA0017440A /* MBProgressHUD+PD.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1031F221AEB6EA0017440A /* MBProgressHUD+PD.m */; };
+		CD1031FE21AEC86C0017440A /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1031FC21AEC86B0017440A /* NetWorkTool.m */; };
+		CD10320321AEC8880017440A /* UIViewController+HCCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1031FF21AEC8880017440A /* UIViewController+HCCategory.m */; };
+		CD10320421AEC8880017440A /* NSObject+HCCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10320121AEC8880017440A /* NSObject+HCCategory.m */; };
 		CD12CEA521AD65A300EFFC56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD12CEA421AD65A300EFFC56 /* AppDelegate.m */; };
 		CD12CEAB21AD65A300EFFC56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD12CEA921AD65A300EFFC56 /* Main.storyboard */; };
 		CD12CEAD21AD65A900EFFC56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD12CEAC21AD65A900EFFC56 /* Assets.xcassets */; };
@@ -69,6 +73,15 @@
 		CD10319C21AE67D30017440A /* DemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoVC.m; sourceTree = "<group>"; };
 		CD10319E21AE70460017440A /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		CD10319F21AE71390017440A /* ToolMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolMacro.h; sourceTree = "<group>"; };
+		CD1031F121AEB6EA0017440A /* MBProgressHUD+PD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+PD.h"; sourceTree = "<group>"; };
+		CD1031F221AEB6EA0017440A /* MBProgressHUD+PD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+PD.m"; sourceTree = "<group>"; };
+		CD1031FC21AEC86B0017440A /* NetWorkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTool.m; sourceTree = "<group>"; };
+		CD1031FD21AEC86C0017440A /* NetWorkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTool.h; sourceTree = "<group>"; };
+		CD1031FF21AEC8880017440A /* UIViewController+HCCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HCCategory.m"; sourceTree = "<group>"; };
+		CD10320021AEC8880017440A /* NSObject+HCCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCCategory.h"; sourceTree = "<group>"; };
+		CD10320121AEC8880017440A /* NSObject+HCCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCCategory.m"; sourceTree = "<group>"; };
+		CD10320221AEC8880017440A /* UIViewController+HCCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HCCategory.h"; sourceTree = "<group>"; };
+		CD10320521AED4D90017440A /* LoginApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginApi.h; sourceTree = "<group>"; };
 		CD12CEA021AD65A300EFFC56 /* xiaoZhang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoZhang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD12CEA321AD65A300EFFC56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD12CEA421AD65A300EFFC56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -291,6 +304,7 @@
 		CD10319121AE66080017440A /* api */ = {
 			isa = PBXGroup;
 			children = (
+				CD10320521AED4D90017440A /* LoginApi.h */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -442,6 +456,8 @@
 		CD12CEDF21AD7C3100EFFC56 /* netTool */ = {
 			isa = PBXGroup;
 			children = (
+				CD1031FD21AEC86C0017440A /* NetWorkTool.h */,
+				CD1031FC21AEC86B0017440A /* NetWorkTool.m */,
 			);
 			path = netTool;
 			sourceTree = "<group>";
@@ -460,8 +476,14 @@
 		CD12CEE721AD7F0700EFFC56 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				CD10320021AEC8880017440A /* NSObject+HCCategory.h */,
+				CD10320121AEC8880017440A /* NSObject+HCCategory.m */,
+				CD10320221AEC8880017440A /* UIViewController+HCCategory.h */,
+				CD1031FF21AEC8880017440A /* UIViewController+HCCategory.m */,
 				CD10316021AE46820017440A /* UINavigationController+Autorotate.h */,
 				CD10316121AE46820017440A /* UINavigationController+Autorotate.m */,
+				CD1031F121AEB6EA0017440A /* MBProgressHUD+PD.h */,
+				CD1031F221AEB6EA0017440A /* MBProgressHUD+PD.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -660,12 +682,16 @@
 				CD10316521AE47E50017440A /* TabBarController.m in Sources */,
 				CD10318C21AE65620017440A /* HomeVC.m in Sources */,
 				CD10318621AE65350017440A /* AdressBookVC.m in Sources */,
+				CD1031FE21AEC86C0017440A /* NetWorkTool.m in Sources */,
 				CD10316221AE46820017440A /* UINavigationController+Autorotate.m in Sources */,
 				CD10316821AE487F0017440A /* BaseNaviVC.m in Sources */,
 				CD12CEE321AD7EA600EFFC56 /* BaseVC.m in Sources */,
 				CD12CED821AD6B5000EFFC56 /* JHGridView.m in Sources */,
+				CD1031F321AEB6EA0017440A /* MBProgressHUD+PD.m in Sources */,
+				CD10320321AEC8880017440A /* UIViewController+HCCategory.m in Sources */,
 				CD12CEA521AD65A300EFFC56 /* AppDelegate.m in Sources */,
 				CD10319D21AE67D30017440A /* DemoVC.m in Sources */,
+				CD10320421AEC8880017440A /* NSObject+HCCategory.m in Sources */,
 				CD10318921AE65500017440A /* CourseVC.m in Sources */,
 				CD10319A21AE66370017440A /* mineVC.m in Sources */,
 			);

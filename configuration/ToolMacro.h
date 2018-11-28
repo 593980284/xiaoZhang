@@ -18,4 +18,35 @@
 #define  HC_safeBottom     [[UIApplication sharedApplication] statusBarFrame].size.height == 44 ? 34 : 0
 #define  HC_naviHeight     [[UIApplication sharedApplication] statusBarFrame].size.height + 44
 
+
+//单例化一个类
+#define SINGLETON_FOR_HEADER(className) \
+\
++ (className *)sharedInstance;
+
+#define SINGLETON_FOR_CLASS(className) \
+\
++ (className *)sharedInstance { \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+shared##className = [[self alloc] init]; \
+}); \
+return shared##className; \
+}
+
+#define SINGLETON_FOR_CLASS_Api(className) \
+\
++ (className *)sharedInstance { \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+NSString *path = [[NSBundle mainBundle]pathForResource:NSStringFromClass([self class])ofType:@"plist"];\
+NSData *data = [NSData dataWithContentsOfFile:path];\
+NSDictionary *dic = [NSDictionary dictionaryWithPlistData:data];\
+shared##className = [self modelWithJSON:dic]; \
+}); \
+return shared##className; \
+}
+
 #endif /* ToolMacro_h */
