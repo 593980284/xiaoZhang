@@ -155,7 +155,6 @@
 				CD10316E21AE62170017440A /* vc */,
 				CD10316F21AE62170017440A /* model */,
 				CD10317021AE62170017440A /* view */,
-				CD10317121AE62170017440A /* api */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -185,17 +184,9 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		CD10317121AE62170017440A /* api */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = api;
-			sourceTree = "<group>";
-		};
 		CD10317221AE62170017440A /* mine */ = {
 			isa = PBXGroup;
 			children = (
-				CD10319421AE66230017440A /* api */,
 				CD10319621AE66230017440A /* model */,
 				CD10319721AE66230017440A /* vc */,
 				CD10319521AE66230017440A /* view */,
@@ -209,7 +200,6 @@
 				CD10317A21AE62170017440A /* vc */,
 				CD10317B21AE62170017440A /* model */,
 				CD10317C21AE62170017440A /* view */,
-				CD10317D21AE62170017440A /* api */,
 			);
 			path = " addressBook";
 			sourceTree = "<group>";
@@ -237,20 +227,12 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		CD10317D21AE62170017440A /* api */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = api;
-			sourceTree = "<group>";
-		};
 		CD10317E21AE62170017440A /* course */ = {
 			isa = PBXGroup;
 			children = (
 				CD10317F21AE62170017440A /* vc */,
 				CD10318021AE62170017440A /* model */,
 				CD10318121AE62170017440A /* view */,
-				CD10318221AE62170017440A /* api */,
 			);
 			path = course;
 			sourceTree = "<group>";
@@ -278,13 +260,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		CD10318221AE62170017440A /* api */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = api;
-			sourceTree = "<group>";
-		};
 		CD10318D21AE66080017440A /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,21 +267,13 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		CD10318E21AE66080017440A /* VC */ = {
+		CD10318E21AE66080017440A /* vc */ = {
 			isa = PBXGroup;
 			children = (
 				CD10318F21AE66080017440A /* LoginVC.m */,
 				CD10319021AE66080017440A /* LoginVC.h */,
 			);
-			path = VC;
-			sourceTree = "<group>";
-		};
-		CD10319121AE66080017440A /* api */ = {
-			isa = PBXGroup;
-			children = (
-				CD10320521AED4D90017440A /* LoginApi.h */,
-			);
-			path = api;
+			path = vc;
 			sourceTree = "<group>";
 		};
 		CD10319221AE66080017440A /* model */ = {
@@ -314,13 +281,6 @@
 			children = (
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		CD10319421AE66230017440A /* api */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = api;
 			sourceTree = "<group>";
 		};
 		CD10319521AE66230017440A /* view */ = {
@@ -465,9 +425,9 @@
 		CD12CEE021AD7E6F00EFFC56 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				CD10319121AE66080017440A /* api */,
+				CD10320521AED4D90017440A /* LoginApi.h */,
 				CD10319221AE66080017440A /* model */,
-				CD10318E21AE66080017440A /* VC */,
+				CD10318E21AE66080017440A /* vc */,
 				CD10318D21AE66080017440A /* view */,
 			);
 			path = login;
