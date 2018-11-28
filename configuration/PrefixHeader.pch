@@ -12,5 +12,10 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import <YYKit.h>
-#import "UserStorage.h"
+#import <SDAutoLayout.h>//布局库
+#import <UIView+SDExtension.h>// view.sd_height -> view.frame.size.height
+
+#import "UserStorage.h"//用户信息本地缓存
+#import "Constant.h"//常量宏定义-域名、appkey等
+#import "ToolMacro.h"//宏定义-屏幕宽高、s系统版本、phonex判断、等
 #endif /* PrefixHeader_pch */
