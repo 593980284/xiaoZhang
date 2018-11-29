@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
      self.title = @"Demo";
+     self.interactivePopDisabled = YES;
      self.view.backgroundColor = [UIColor redColor];
 
 }

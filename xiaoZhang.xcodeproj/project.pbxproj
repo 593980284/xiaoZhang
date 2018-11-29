@@ -21,6 +21,7 @@
 		CD1031FE21AEC86C0017440A /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1031FC21AEC86B0017440A /* NetWorkTool.m */; };
 		CD10320321AEC8880017440A /* UIViewController+HCCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1031FF21AEC8880017440A /* UIViewController+HCCategory.m */; };
 		CD10320421AEC8880017440A /* NSObject+HCCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10320121AEC8880017440A /* NSObject+HCCategory.m */; };
+		CD10320821B0042E0017440A /* ApplyPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10320721B0042E0017440A /* ApplyPermission.m */; };
 		CD12CEA521AD65A300EFFC56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD12CEA421AD65A300EFFC56 /* AppDelegate.m */; };
 		CD12CEAB21AD65A300EFFC56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD12CEA921AD65A300EFFC56 /* Main.storyboard */; };
 		CD12CEAD21AD65A900EFFC56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD12CEAC21AD65A900EFFC56 /* Assets.xcassets */; };
@@ -82,6 +83,8 @@
 		CD10320121AEC8880017440A /* NSObject+HCCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCCategory.m"; sourceTree = "<group>"; };
 		CD10320221AEC8880017440A /* UIViewController+HCCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HCCategory.h"; sourceTree = "<group>"; };
 		CD10320521AED4D90017440A /* LoginApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginApi.h; sourceTree = "<group>"; };
+		CD10320621B0042E0017440A /* ApplyPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyPermission.h; sourceTree = "<group>"; };
+		CD10320721B0042E0017440A /* ApplyPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyPermission.m; sourceTree = "<group>"; };
 		CD12CEA021AD65A300EFFC56 /* xiaoZhang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoZhang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD12CEA321AD65A300EFFC56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD12CEA421AD65A300EFFC56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -403,8 +406,8 @@
 				CD12CEE821AD7F4700EFFC56 /* utils */,
 				CD12CEE721AD7F0700EFFC56 /* category */,
 				CD12CEDF21AD7C3100EFFC56 /* netTool */,
-				CD12CEDC21AD700F00EFFC56 /* UserStorage.h */,
 				CD12CEDD21AD700F00EFFC56 /* UserStorage.m */,
+				CD12CEDC21AD700F00EFFC56 /* UserStorage.h */,
 				CD12CEE121AD7EA600EFFC56 /* BaseVC.h */,
 				CD12CEE221AD7EA600EFFC56 /* BaseVC.m */,
 				CD10316621AE487F0017440A /* BaseNaviVC.h */,
@@ -451,6 +454,8 @@
 		CD12CEE821AD7F4700EFFC56 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				CD10320621B0042E0017440A /* ApplyPermission.h */,
+				CD10320721B0042E0017440A /* ApplyPermission.m */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 				CD12CEDE21AD700F00EFFC56 /* UserStorage.m in Sources */,
 				CD10319321AE66080017440A /* LoginVC.m in Sources */,
 				CD10316521AE47E50017440A /* TabBarController.m in Sources */,
+				CD10320821B0042E0017440A /* ApplyPermission.m in Sources */,
 				CD10318C21AE65620017440A /* HomeVC.m in Sources */,
 				CD10318621AE65350017440A /* AdressBookVC.m in Sources */,
 				CD1031FE21AEC86C0017440A /* NetWorkTool.m in Sources */,

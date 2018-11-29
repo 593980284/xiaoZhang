@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TabBarController.h"
+#import "ApplyPermission.h"
 @interface AppDelegate ()
 
 @end
@@ -26,6 +27,10 @@
      if (@available(iOS 11.0, *)) {
         [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
      }
+    [[ApplyPermission sharedInstance] applyPermissionWithPermissionType:ApplyPermissionTypeWhileLocation complete:^(BOOL isAllow, BOOL isFirst) {
+        NSLog(@"是否允许定位：%@", isAllow ? @"ture": @"false");
+        NSLog(@"是否第一次：%@", isFirst  ? @"ture": @"false");
+    }];
     return YES;
 }
 

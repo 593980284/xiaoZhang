@@ -40,44 +40,44 @@
 }
 
 
-//- (void)setInteractivePopDisabled:(BOOL)interactivePopDisabled
-//{
-//    self.gk_interactivePopDisabled = interactivePopDisabled;
-//}
-/** ***********************************************/
-//- (BOOL)interactivePopDisabled
-//{
-//    return self.gk_interactivePopDisabled;
-//}
-//
-//- (void)setNavBarAlpha:(CGFloat)navBarAlpha
-//{
-//    self.gk_navBarAlpha = navBarAlpha;
-//}
-//
-//- (CGFloat)navBarAlpha
-//{
-//    return self.gk_navBarAlpha;
-//}
-//
-//- (void)setPopMaxAllowedDistanceToLeftEdge:(CGFloat)popMaxAllowedDistanceToLeftEdge
-//{
-//    self.gk_popMaxAllowedDistanceToLeftEdge = popMaxAllowedDistanceToLeftEdge;
-//}
-//
-//- (CGFloat)popMaxAllowedDistanceToLeftEdge
-//{
-//  return self.gk_popMaxAllowedDistanceToLeftEdge;
-//}
-//
-//- (void)setFullScreenPopDisabled:(BOOL)fullScreenPopDisabled
-//{
-//    self.gk_fullScreenPopDisabled = fullScreenPopDisabled;
-//}
-//
-//- (BOOL)fullScreenPopDisabled
-//{
-//    return self.gk_fullScreenPopDisabled;
-//}
+- (void)setInteractivePopDisabled:(BOOL)interactivePopDisabled
+{
+    self.gk_interactivePopDisabled = interactivePopDisabled;
+}
+/* **********************************************/
+- (BOOL)interactivePopDisabled
+{
+    return self.gk_interactivePopDisabled;
+}
+
+- (void)setNavBarAlpha:(CGFloat)navBarAlpha
+{
+    self.gk_navBarAlpha = navBarAlpha;
+}
+
+- (CGFloat)navBarAlpha
+{
+    return self.gk_navBarAlpha;
+}
+
+- (void)setPopMaxAllowedDistanceToLeftEdge:(CGFloat)popMaxAllowedDistanceToLeftEdge
+{
+    self.gk_popMaxAllowedDistanceToLeftEdge = popMaxAllowedDistanceToLeftEdge;
+}
+
+- (CGFloat)popMaxAllowedDistanceToLeftEdge
+{
+  return self.gk_popMaxAllowedDistanceToLeftEdge;
+}
+
+- (void)setFullScreenPopDisabled:(BOOL)fullScreenPopDisabled
+{
+    self.gk_fullScreenPopDisabled = fullScreenPopDisabled;
+}
+
+- (BOOL)fullScreenPopDisabled
+{
+    return self.gk_fullScreenPopDisabled;
+}
 
 @end

@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     UIView *view = [UIView new];
     view.frame = CGRectMake(0, 0, 100, 100);
-    self.gk_navBarAlpha = 0.5;
+//    self.navBarAlpha = 0.5;
     view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:view];
     NSLog(@"%@",LoginApi_login);
