@@ -4,7 +4,7 @@
 //
 //  Created by 胡胡超 on 2018/11/27.
 //  Copyright © 2018年 胡胡超. All rights reserved.
-//用于用户数据缓存（也可以其他数据缓存）
+//
 
 #import <Foundation/Foundation.h>
 
