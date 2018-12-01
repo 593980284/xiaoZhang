@@ -1,5 +1,5 @@
 //
-//  HomeVC.h
+//  HomeFormView.h
 //  xiaoZhang
 //
 //  Created by 胡胡超 on 2018/12/1.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeVC : UIViewController
+@interface HomeFormView : UIView
 
 @end
 
