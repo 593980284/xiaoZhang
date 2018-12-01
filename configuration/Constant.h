@@ -18,6 +18,9 @@
 
 #define HexColor(x)  [UIColor colorWithHexString:x]
 #define LineColor    [UIColor colorWithHexString:@"aaaaaa"]
+#define TitleColor_333   [UIColor colorWithHexString:@"333333"]
+#define DetialColor_666   [UIColor colorWithHexString:@"666666"]
+#define PlaceholderColor_333   [UIColor colorWithHexString:@"999999"]
 #define LineHeight   0.5
 
 #endif /* Constant_h */
