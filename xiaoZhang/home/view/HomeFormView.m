@@ -18,4 +18,24 @@
 }
 */
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.layer.borderColor = LineColor.CGColor;
+    self.layer.borderWidth = LineHeight;
+    _line1.backgroundColor = LineColor;
+    _line2.backgroundColor = LineColor;
+    _line3.backgroundColor = LineColor;
+    _line4.backgroundColor = LineColor;
+    
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+    {
+        if (self = [super initWithFrame:frame]) {
+            self= [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil]lastObject];
+        }
+        return self;
+    }
+
+
 @end

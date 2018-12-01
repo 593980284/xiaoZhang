@@ -17,6 +17,8 @@
 #define  HC_statusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define  HC_safeBottom     [[UIApplication sharedApplication] statusBarFrame].size.height == 44 ? 34 : 0
 #define  HC_naviHeight     [[UIApplication sharedApplication] statusBarFrame].size.height + 44
+#define  HC_750Ratio       HC_windowWidth / 750.0
+#define  HC_750Font(x)     [UIFont systemFontOfSize:x / HC_750Ratio]
 
 
 //单例化一个类

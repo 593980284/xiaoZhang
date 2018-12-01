@@ -7,16 +7,17 @@
 //
 
 #import "ApplyPermission.h"
+#import <Contacts/Contacts.h>
 @interface ApplyPermission() <CLLocationManagerDelegate>
 @property(nonatomic, strong)CLLocationManager *  locationManager ;
 @property(nonatomic, copy) void (^complete)(BOOL, BOOL) ;
 @end
 @implementation ApplyPermission
 
-+ (instancetype)sharedInstance { \
++ (instancetype)sharedInstance {
     static ApplyPermission *_instance = nil;
-    static dispatch_once_t onceToken; \
-    dispatch_once(&onceToken, ^{ \
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         _instance = [[self alloc] init];
     });
     return _instance;
@@ -29,7 +30,9 @@
         case ApplyPermissionTypeWhileLocation:
             [self applyLocationPermissionWithPermissionType:permissionType complete:complete];
             break;
-            
+        case ApplyPermissionTypeAddressBook:
+            [self applyAddressBookPermissionWithComplete:complete];
+            break;
         default:
             break;
     }
@@ -65,6 +68,35 @@
     if (status != kCLAuthorizationStatusNotDetermined) {
         _locationManager = nil;
         _complete = nil;
+    }
+}
+
+
+- (void)applyAddressBookPermissionWithComplete: (void(^)(BOOL isAllow, BOOL))complete{
+    CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+    CNContactStore * store = [CNContactStore new];
+    
+    if (status == CNAuthorizationStatusNotDetermined) {
+        [store requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            //3.1 判断是否出错
+            if (error) {
+                //applyPermissionResult(NO);
+                return;
+            }
+            //3.2 判断是否授权
+            if (granted) {
+                complete(YES, YES);
+                NSLog(@"已经授权");
+                
+            } else {
+                NSLog(@"没有授权");
+                complete(NO, YES);
+            }
+        }];
+    }else if(status == CNAuthorizationStatusAuthorized){
+       complete(YES, NO);
+    }else{
+       complete(NO, NO);
     }
 }
 @end

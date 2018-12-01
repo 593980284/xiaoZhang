@@ -7,7 +7,7 @@
 //
 
 #import "HomeVC.h"
-
+#import "HomeFormView.h"
 @interface HomeVC ()
 
 @end
@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    HomeFormView * dayFormView = [HomeFormView new];
+    [self.view addSubview:dayFormView];
+    dayFormView.sd_layout
+    .topSpaceToView(self.view, HC_naviHeight)
+    .leftSpaceToView(self.view, 15)
+    .rightSpaceToView(self.view, 15)
+    .heightIs(150);
 }
 
 /*

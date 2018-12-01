@@ -7,7 +7,8 @@
 //
 
 #import "CourseVC.h"
-
+#import "ApplyPermission.h"
+#import "AddressBookUtils.h"
 @interface CourseVC ()
 
 @end
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[ApplyPermission sharedInstance] applyPermissionWithPermissionType:ApplyPermissionTypeAddressBook complete:^(BOOL isAllow, BOOL isFirst) {
+        NSArray * a =  [AddressBookUtils getAllPeopleInfoToModel];
+        NSLog(@"%@", a);
+    }];
 }
 
 /*

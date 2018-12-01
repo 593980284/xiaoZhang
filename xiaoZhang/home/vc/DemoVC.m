@@ -20,7 +20,6 @@
      self.title = @"Demo";
      self.interactivePopDisabled = YES;
      self.view.backgroundColor = [UIColor redColor];
-
 }
 
 - (BOOL)shouldAutorotate

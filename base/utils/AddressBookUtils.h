@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
+#import <Contacts/Contacts.h>
+@interface HCContact : NSObject
+@property (nonatomic, copy) NSString *givenName;
+@property (nonatomic, copy) NSString *familyName;
+@property (nonatomic, strong) NSData *thumbnailImageData;
+@property (nonatomic, strong) NSArray *phoneNumbers;
+@end
 @interface AddressBookUtils : NSObject
 
++ (NSArray <HCContact *> *)getAllPeopleInfoToModel;
+
++ (NSArray <CNContact *> *)getAllPeopleInfo;
 @end
 
-NS_ASSUME_NONNULL_END

@@ -16,5 +16,9 @@
 #define kBaseUrl @"http://112.2.0.75:9001/app/lexiang/"
 #endif
 
+#define HexColor(x)  [UIColor colorWithHexString:x]
+#define LineColor    [UIColor colorWithHexString:@"aaaaaa"]
+#define LineHeight   0.5
+
 #endif /* Constant_h */
 

@@ -10,7 +10,8 @@
 typedef NS_ENUM(NSInteger,ApplyPermissionType)
 {
     ApplyPermissionTypeWhileLocation,
-    ApplyPermissionTypeLocationAlways    
+    ApplyPermissionTypeLocationAlways,
+    ApplyPermissionTypeAddressBook
 };
 @interface ApplyPermission : NSObject
 + (instancetype)sharedInstance;

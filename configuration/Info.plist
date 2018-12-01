@@ -47,5 +47,7 @@
 	<string>3333</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>44444</string>
+	<key>NSContactsUsageDescription</key>
+	<string>申请通讯录权限</string>
 </dict>
 </plist>
