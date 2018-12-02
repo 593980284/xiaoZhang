@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Contacts/Contacts.h>
 @interface HCContact : NSObject
-@property (nonatomic, copy) NSString *givenName;
-@property (nonatomic, copy) NSString *familyName;
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSData *thumbnailImageData;
 @property (nonatomic, strong) NSArray *phoneNumbers;
 @end

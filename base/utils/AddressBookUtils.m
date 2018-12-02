@@ -31,9 +31,8 @@
     NSMutableArray *array = [NSMutableArray new];
     for (CNContact *model in peopleArray) {
         HCContact *contact = [HCContact new];
-        contact.givenName = model.givenName;
         contact.thumbnailImageData = model.thumbnailImageData;
-        contact.familyName = model.familyName;
+        contact.name = [NSString stringWithFormat:@"%@%@",model.familyName,model.givenName];
         contact.phoneNumbers = [self translation1:model.phoneNumbers];
         [array addObject:contact];
     }
