@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09DA4B554FF6CDBB79AD39B0 /* libPods-xiaoZhang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AD148538692D278D7067B0 /* libPods-xiaoZhang.a */; };
+		981279F121B96BFC00F79683 /* AddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 981279F021B96BFC00F79683 /* AddressBookCell.m */; };
 		CD10316221AE46820017440A /* UINavigationController+Autorotate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316121AE46820017440A /* UINavigationController+Autorotate.m */; };
 		CD10316521AE47E50017440A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316421AE47E50017440A /* TabBarController.m */; };
 		CD10316821AE487F0017440A /* BaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316721AE487F0017440A /* BaseNaviVC.m */; };
@@ -56,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		80AD148538692D278D7067B0 /* libPods-xiaoZhang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xiaoZhang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		981279EF21B96BFC00F79683 /* AddressBookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookCell.h; sourceTree = "<group>"; };
+		981279F021B96BFC00F79683 /* AddressBookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookCell.m; sourceTree = "<group>"; };
 		9851A7A6BF6236B94E51B883 /* Pods-xiaoZhang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaoZhang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang.debug.xcconfig"; sourceTree = "<group>"; };
 		CD10316021AE46820017440A /* UINavigationController+Autorotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Autorotate.h"; sourceTree = "<group>"; };
 		CD10316121AE46820017440A /* UINavigationController+Autorotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Autorotate.m"; sourceTree = "<group>"; };
@@ -160,6 +163,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		981279EE21B96B4300F79683 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				981279EF21B96BFC00F79683 /* AddressBookCell.h */,
+				981279F021B96BFC00F79683 /* AddressBookCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		CD10316D21AE62170017440A /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,8 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				CD10317A21AE62170017440A /* vc */,
+				981279EE21B96B4300F79683 /* view */,
 				CD10317B21AE62170017440A /* model */,
-				CD10317C21AE62170017440A /* view */,
 			);
 			path = " addressBook";
 			sourceTree = "<group>";
@@ -232,13 +244,6 @@
 			children = (
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		CD10317C21AE62170017440A /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		CD10317E21AE62170017440A /* course */ = {
@@ -607,15 +612,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-xiaoZhang-checkManifestLockResult.txt",
 			);
@@ -629,16 +630,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/AAChartKit/AAChartKitLib.bundle",
 				"${PODS_ROOT}/GKNavigationController/GKNavigationController/Resource",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AAChartKitLib.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resource",
@@ -672,6 +669,7 @@
 				CD13638421B2B89100754B0E /* HomeVC.m in Sources */,
 				CD10320321AEC8880017440A /* UIViewController+HCCategory.m in Sources */,
 				CD12CEA521AD65A300EFFC56 /* AppDelegate.m in Sources */,
+				981279F121B96BFC00F79683 /* AddressBookCell.m in Sources */,
 				CD10319D21AE67D30017440A /* DemoVC.m in Sources */,
 				CD10320421AEC8880017440A /* NSObject+HCCategory.m in Sources */,
 				CD10318921AE65500017440A /* CourseVC.m in Sources */,
@@ -849,16 +847,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57SHQCZQAR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/configuration/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/configuration/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = demo.xiaoZhang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -869,16 +869,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57SHQCZQAR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/configuration/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/configuration/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = demo.xiaoZhang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
