@@ -20,6 +20,7 @@
 #define  HC_tabBarHeight   (HC_iPhoneX ? (49.f+34.f) : 49.f)
 #define  HC_750Ratio       HC_windowWidth / 750.0
 #define  HC_750Font(x)     [UIFont systemFontOfSize:x / HC_750Ratio]
+#define  HC__weakSelf      __weak typeof(self) weakSelf = self;
 
 
 //单例化一个类

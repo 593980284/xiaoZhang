@@ -36,6 +36,11 @@
 		CD13632021B2676900754B0E /* HomeFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD13631F21B2676900754B0E /* HomeFormView.xib */; };
 		CD13638421B2B89100754B0E /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13638221B2B89100754B0E /* HomeVC.m */; };
 		CD13638821B2D79A00754B0E /* AddressBookUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13638721B2D79A00754B0E /* AddressBookUtils.m */; };
+		CD1363E121B3B06600754B0E /* TimerBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1363E021B3B06600754B0E /* TimerBtn.m */; };
+		CD1363E421B3B58D00754B0E /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1363E321B3B58D00754B0E /* NSString+Regular.m */; };
+		CD1363E721B3BBD500754B0E /* PasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1363E621B3BBD500754B0E /* PasswordView.m */; };
+		CD1363E921B3BBEB00754B0E /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1363E821B3BBEB00754B0E /* PasswordView.xib */; };
+		CD1363EC21B3D8ED00754B0E /* RefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1363EB21B3D8ED00754B0E /* RefreshTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +122,15 @@
 		CD13638221B2B89100754B0E /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		CD13638621B2D79A00754B0E /* AddressBookUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookUtils.h; sourceTree = "<group>"; };
 		CD13638721B2D79A00754B0E /* AddressBookUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookUtils.m; sourceTree = "<group>"; };
+		CD1363DF21B3B06600754B0E /* TimerBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerBtn.h; sourceTree = "<group>"; };
+		CD1363E021B3B06600754B0E /* TimerBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerBtn.m; sourceTree = "<group>"; };
+		CD1363E221B3B58D00754B0E /* NSString+Regular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regular.h"; sourceTree = "<group>"; };
+		CD1363E321B3B58D00754B0E /* NSString+Regular.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regular.m"; sourceTree = "<group>"; };
+		CD1363E521B3BBD500754B0E /* PasswordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordView.h; sourceTree = "<group>"; };
+		CD1363E621B3BBD500754B0E /* PasswordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordView.m; sourceTree = "<group>"; };
+		CD1363E821B3BBEB00754B0E /* PasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordView.xib; sourceTree = "<group>"; };
+		CD1363EA21B3D8ED00754B0E /* RefreshTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshTableView.h; sourceTree = "<group>"; };
+		CD1363EB21B3D8ED00754B0E /* RefreshTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshTableView.m; sourceTree = "<group>"; };
 		E9DBF2627960920BBC44DAB3 /* Pods-xiaoZhang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaoZhang.release.xcconfig"; path = "Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,6 +296,11 @@
 		CD10318D21AE66080017440A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CD1363DF21B3B06600754B0E /* TimerBtn.h */,
+				CD1363E021B3B06600754B0E /* TimerBtn.m */,
+				CD1363E521B3BBD500754B0E /* PasswordView.h */,
+				CD1363E621B3BBD500754B0E /* PasswordView.m */,
+				CD1363E821B3BBEB00754B0E /* PasswordView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -426,6 +445,8 @@
 				CD12CEDC21AD700F00EFFC56 /* UserStorage.h */,
 				CD12CEE121AD7EA600EFFC56 /* BaseVC.h */,
 				CD12CEE221AD7EA600EFFC56 /* BaseVC.m */,
+				CD1363EA21B3D8ED00754B0E /* RefreshTableView.h */,
+				CD1363EB21B3D8ED00754B0E /* RefreshTableView.m */,
 				CD10316621AE487F0017440A /* BaseNaviVC.h */,
 				CD10316721AE487F0017440A /* BaseNaviVC.m */,
 			);
@@ -463,6 +484,8 @@
 				CD10316121AE46820017440A /* UINavigationController+Autorotate.m */,
 				CD1031F121AEB6EA0017440A /* MBProgressHUD+PD.h */,
 				CD1031F221AEB6EA0017440A /* MBProgressHUD+PD.m */,
+				CD1363E221B3B58D00754B0E /* NSString+Regular.h */,
+				CD1363E321B3B58D00754B0E /* NSString+Regular.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -586,6 +609,7 @@
 				CD12CEB021AD65A900EFFC56 /* LaunchScreen.storyboard in Resources */,
 				CD13632021B2676900754B0E /* HomeFormView.xib in Resources */,
 				CD12CEAD21AD65A900EFFC56 /* Assets.xcassets in Resources */,
+				CD1363E921B3BBEB00754B0E /* PasswordView.xib in Resources */,
 				CD12CEAB21AD65A300EFFC56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,6 +679,7 @@
 				CD12CEB321AD65A900EFFC56 /* main.m in Sources */,
 				CD12CEDE21AD700F00EFFC56 /* UserStorage.m in Sources */,
 				CD10319321AE66080017440A /* LoginVC.m in Sources */,
+				CD1363EC21B3D8ED00754B0E /* RefreshTableView.m in Sources */,
 				CD10316521AE47E50017440A /* TabBarController.m in Sources */,
 				CD10320821B0042E0017440A /* ApplyPermission.m in Sources */,
 				CD10318621AE65350017440A /* AdressBookVC.m in Sources */,
@@ -668,12 +693,15 @@
 				CD1031F321AEB6EA0017440A /* MBProgressHUD+PD.m in Sources */,
 				CD13638421B2B89100754B0E /* HomeVC.m in Sources */,
 				CD10320321AEC8880017440A /* UIViewController+HCCategory.m in Sources */,
+				CD1363E121B3B06600754B0E /* TimerBtn.m in Sources */,
 				CD12CEA521AD65A300EFFC56 /* AppDelegate.m in Sources */,
 				981279F121B96BFC00F79683 /* AddressBookCell.m in Sources */,
 				CD10319D21AE67D30017440A /* DemoVC.m in Sources */,
+				CD1363E421B3B58D00754B0E /* NSString+Regular.m in Sources */,
 				CD10320421AEC8880017440A /* NSObject+HCCategory.m in Sources */,
 				CD10318921AE65500017440A /* CourseVC.m in Sources */,
 				CD10319A21AE66370017440A /* mineVC.m in Sources */,
+				CD1363E721B3BBD500754B0E /* PasswordView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

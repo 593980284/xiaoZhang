@@ -20,4 +20,5 @@
 #import "ToolMacro.h"//宏定义-屏幕宽高、s系统版本、phonex判断、等
 #import "MBProgressHUD+PD.h"
 #import "NetWorkTool.h"
+#import "NSString+Regular.h"
 #endif /* PrefixHeader_pch */

@@ -32,11 +32,36 @@
     for (CNContact *model in peopleArray) {
         HCContact *contact = [HCContact new];
         contact.thumbnailImageData = model.thumbnailImageData;
-        contact.name = [NSString stringWithFormat:@"%@%@",model.familyName,model.givenName];
+         NSString *  name = [NSString stringWithFormat:@"%@%@",model.familyName,model.givenName];
+        contact.name = name;
+        if (contact.thumbnailImageData == nil || contact.thumbnailImageData.length == 0) {
+            if (name.length > 2) {
+                name = [name substringFromIndex:name.length - 2];
+            }
+          UIImage *image = [self creatPlaceHoderImage:name];
+          contact.thumbnailImageData = UIImageJPEGRepresentation(image,1.0f);//第二个参数为压缩倍数
+        }
+       
         contact.phoneNumbers = [self translation1:model.phoneNumbers];
         [array addObject:contact];
     }
     return [array copy];
+}
+
++ (UIImage *)creatPlaceHoderImage:(NSString *)name{
+    UIGraphicsBeginImageContext(CGSizeMake(60, 60));
+    CGContextRef context = UIGraphicsGetCurrentContext();//75 150 243
+    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:75/255.0 green:150/255.0  blue:243/255.0  alpha:1].CGColor);
+    CGContextFillRect(context, CGRectMake(0, 0, 60, 60));
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    NSMutableAttributedString *nameStr = [[NSMutableAttributedString alloc]initWithString:name attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:20], NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                                                            NSParagraphStyleAttributeName:paragraphStyle
+                                                                                                            }];
+    [nameStr drawInRect:CGRectMake(0, 20, 60, 22)];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 /**
