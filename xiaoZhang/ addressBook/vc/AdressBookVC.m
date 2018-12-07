@@ -17,6 +17,7 @@
     NSArray *_alphabetArray;
     NSMutableArray *_addressBookArray;
 }
+@property(nonatomic, strong) NSMutableArray *addressBookArray;
 
 
 @end
@@ -30,11 +31,11 @@
     _alphabetArray = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
     _addressBookArray = [[NSMutableArray alloc] init];
     [self setUI];
-    
+    HC__weakSelf
     [[ApplyPermission sharedInstance] applyPermissionWithPermissionType:ApplyPermissionTypeAddressBook complete:^(BOOL isAllow, BOOL isFirst) {
         NSArray *array =  [AddressBookUtils getAllPeopleInfoToModel];
         NSLog(@"-------%@", array);
-        _addressBookArray = array;
+        weakSelf.addressBookArray = [array mutableCopy];
     }];
 
 }
@@ -63,9 +64,8 @@
     }
 //    _addressBookArray
     
-    HCContact *model = [[HCContact alloc] init];
-    model = _addressBookArray[indexPath.row];
-    cell.iconView.image = [UIImage imageNamed:@"header"];
+    HCContact *model = _addressBookArray[indexPath.row];
+    cell.iconView.image = [[UIImage alloc]initWithData:model.thumbnailImageData];
     cell.nameLabel.text = model.name;
     return cell;
 }

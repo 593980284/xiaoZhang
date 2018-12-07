@@ -18,6 +18,8 @@
             iconView.frame = CGRectMake(20, 10, 40, 40);
             [self.contentView addSubview:iconView];
             self.iconView = iconView;
+            iconView.layer.cornerRadius = 20;
+            iconView.clipsToBounds = YES;
             
             UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, 10, 200, 40)];
             nameLabel.font = [UIFont systemFontOfSize:18];

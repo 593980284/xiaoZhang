@@ -58,7 +58,7 @@
     NSMutableAttributedString *nameStr = [[NSMutableAttributedString alloc]initWithString:name attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:20], NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                                             NSParagraphStyleAttributeName:paragraphStyle
                                                                                                             }];
-    [nameStr drawInRect:CGRectMake(0, 20, 60, 22)];
+    [nameStr drawInRect:CGRectMake(0, 19, 60, 22)];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
