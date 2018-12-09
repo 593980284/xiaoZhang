@@ -8,6 +8,8 @@
 
 #import "HomeVC.h"
 #import "HomeFormView.h"
+#import "LoginVC.h"
+#import "BaseNaviVC.h"
 @interface HomeVC ()
 
 @end
@@ -22,8 +24,14 @@
     dayFormView.sd_layout
     .topSpaceToView(self.view, HC_naviHeight)
     .leftSpaceToView(self.view, 15)
-    .rightSpaceToView(self.view, 15)
+      .rightSpaceToView(self.view, 15)
     .heightIs(150);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    BaseNaviVC* vc = [[BaseNaviVC alloc]initWithRootViewController:[LoginVC new]];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 /*

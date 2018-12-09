@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09DA4B554FF6CDBB79AD39B0 /* libPods-xiaoZhang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AD148538692D278D7067B0 /* libPods-xiaoZhang.a */; };
 		981279F121B96BFC00F79683 /* AddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 981279F021B96BFC00F79683 /* AddressBookCell.m */; };
+		98C13F1721BBEEFF009FA39E /* MineListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C13F1621BBEEFF009FA39E /* MineListCell.m */; };
 		CD10316221AE46820017440A /* UINavigationController+Autorotate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316121AE46820017440A /* UINavigationController+Autorotate.m */; };
 		CD10316521AE47E50017440A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316421AE47E50017440A /* TabBarController.m */; };
 		CD10316821AE487F0017440A /* BaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316721AE487F0017440A /* BaseNaviVC.m */; };
@@ -65,6 +66,8 @@
 		981279EF21B96BFC00F79683 /* AddressBookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookCell.h; sourceTree = "<group>"; };
 		981279F021B96BFC00F79683 /* AddressBookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookCell.m; sourceTree = "<group>"; };
 		9851A7A6BF6236B94E51B883 /* Pods-xiaoZhang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaoZhang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang.debug.xcconfig"; sourceTree = "<group>"; };
+		98C13F1521BBEEFF009FA39E /* MineListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineListCell.h; sourceTree = "<group>"; };
+		98C13F1621BBEEFF009FA39E /* MineListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineListCell.m; sourceTree = "<group>"; };
 		CD10316021AE46820017440A /* UINavigationController+Autorotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Autorotate.h"; sourceTree = "<group>"; };
 		CD10316121AE46820017440A /* UINavigationController+Autorotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Autorotate.m"; sourceTree = "<group>"; };
 		CD10316321AE47E50017440A /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -308,8 +311,8 @@
 		CD10318E21AE66080017440A /* vc */ = {
 			isa = PBXGroup;
 			children = (
-				CD10318F21AE66080017440A /* LoginVC.m */,
 				CD10319021AE66080017440A /* LoginVC.h */,
+				CD10318F21AE66080017440A /* LoginVC.m */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -324,6 +327,8 @@
 		CD10319521AE66230017440A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				98C13F1521BBEEFF009FA39E /* MineListCell.h */,
+				98C13F1621BBEEFF009FA39E /* MineListCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -676,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98C13F1721BBEEFF009FA39E /* MineListCell.m in Sources */,
 				CD12CEB321AD65A900EFFC56 /* main.m in Sources */,
 				CD12CEDE21AD700F00EFFC56 /* UserStorage.m in Sources */,
 				CD10319321AE66080017440A /* LoginVC.m in Sources */,

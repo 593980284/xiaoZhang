@@ -21,7 +21,7 @@
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return [self.viewControllers.lastObject supportedInterfaceOrientations];
+    return [self.viewControllers.lastObject preferredInterfaceOrientationForPresentation];
 }
 
 @end

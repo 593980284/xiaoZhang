@@ -14,6 +14,13 @@ static NSString * storageSubPath = @"/Documents/userData_HC_";
 
 @implementation UserModel
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    // 将personId映射到key为id的数据字段
+    return @{@"ID":@"id"};
+    // 映射可以设定多个映射字段
+    //  return @{@"personId":@[@"id",@"uid",@"ID"]};
+}
+
 @end
 @interface UserStorage()
 @property(nonatomic, strong)YYKVStorage * storage;

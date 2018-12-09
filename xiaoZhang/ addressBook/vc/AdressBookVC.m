@@ -42,11 +42,14 @@ NSString *const CYPinyinGroupCharArray = @"CYPinyinGroupCharArray";
 }
 
 - (void)setUI {
-    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, HC_naviHeight, HC_windowWidth, HC_windowHeight-HC_tabBarHeight-HC_naviHeight) style:UITableViewStylePlain];
+    _myTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [_myTableView registerClass:[AddressBookCell class] forCellReuseIdentifier:@"myCellId"];
     _myTableView.dataSource = self;
     _myTableView.delegate = self;
     [self.view addSubview:_myTableView];
+    _myTableView.sd_layout
+    .spaceToSuperView(UIEdgeInsetsMake(HC_naviHeight, 0, 0, 0));
+
 }
 
 #pragma mark - 字母排列

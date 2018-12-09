@@ -17,9 +17,11 @@
 #define  HC_statusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define  HC_safeBottom     [[UIApplication sharedApplication] statusBarFrame].size.height == 44 ? 34 : 0
 #define  HC_naviHeight     [[UIApplication sharedApplication] statusBarFrame].size.height + 44
-#define  HC_tabBarHeight   (HC_iPhoneX ? (49.f+34.f) : 49.f)
-#define  HC_750Ratio       HC_windowWidth / 750.0
+#define  HC_tabBarHeight   (HC_iPhoneX || HC_iPhoneXS ? (49.f+34.f) : 49.f)
+#define  HC_750Ratio       (HC_windowWidth / 750.0)
+#define  HC_320Ratio       (HC_windowWidth / 320.0)
 #define  HC_750Font(x)     [UIFont systemFontOfSize:x / HC_750Ratio]
+#define  HC_320Font(x)     [UIFont systemFontOfSize:x / HC_320Ratio]
 #define  HC__weakSelf      __weak typeof(self) weakSelf = self;
 
 

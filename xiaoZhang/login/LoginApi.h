@@ -9,6 +9,7 @@
 #ifndef LoginApi_h
 #define LoginApi_h
 
+#define LoginApi_testLogin @"login/appHeadmasterOnlyPhoneLogin"
 #define LoginApi_login @"login/appHeadmasterPhoneLogin"
 #define LoginApi_Code  @"login/appMsgCode"
 #endif /* LoginApi_h */
