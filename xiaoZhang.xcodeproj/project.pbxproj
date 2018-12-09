@@ -41,6 +41,7 @@
 		CD1363E721B3BBD500754B0E /* PasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1363E621B3BBD500754B0E /* PasswordView.m */; };
 		CD1363E921B3BBEB00754B0E /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1363E821B3BBEB00754B0E /* PasswordView.xib */; };
 		CD1363EC21B3D8ED00754B0E /* RefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1363EB21B3D8ED00754B0E /* RefreshTableView.m */; };
+		CD1365DB21BD223300754B0E /* UIImageView+Net.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1365DA21BD223300754B0E /* UIImageView+Net.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,8 @@
 		CD1363E821B3BBEB00754B0E /* PasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordView.xib; sourceTree = "<group>"; };
 		CD1363EA21B3D8ED00754B0E /* RefreshTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshTableView.h; sourceTree = "<group>"; };
 		CD1363EB21B3D8ED00754B0E /* RefreshTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshTableView.m; sourceTree = "<group>"; };
+		CD1365D921BD223300754B0E /* UIImageView+Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Net.h"; sourceTree = "<group>"; };
+		CD1365DA21BD223300754B0E /* UIImageView+Net.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Net.m"; sourceTree = "<group>"; };
 		E9DBF2627960920BBC44DAB3 /* Pods-xiaoZhang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaoZhang.release.xcconfig"; path = "Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -486,6 +489,8 @@
 				CD1031F221AEB6EA0017440A /* MBProgressHUD+PD.m */,
 				CD1363E221B3B58D00754B0E /* NSString+Regular.h */,
 				CD1363E321B3B58D00754B0E /* NSString+Regular.m */,
+				CD1365D921BD223300754B0E /* UIImageView+Net.h */,
+				CD1365DA21BD223300754B0E /* UIImageView+Net.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 				CD12CEDE21AD700F00EFFC56 /* UserStorage.m in Sources */,
 				CD10319321AE66080017440A /* LoginVC.m in Sources */,
 				CD1363EC21B3D8ED00754B0E /* RefreshTableView.m in Sources */,
+				CD1365DB21BD223300754B0E /* UIImageView+Net.m in Sources */,
 				CD10316521AE47E50017440A /* TabBarController.m in Sources */,
 				CD10320821B0042E0017440A /* ApplyPermission.m in Sources */,
 				CD10318621AE65350017440A /* AdressBookVC.m in Sources */,
