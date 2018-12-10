@@ -93,7 +93,7 @@
     .topSpaceToView(headerView, 20)
     .leftSpaceToView(self.view, 10)
     .rightSpaceToView(self.view, 10)
-    .heightIs(40*HC_320Ratio);
+    .heightIs(40*HC_750Ratio);
     
     
 }

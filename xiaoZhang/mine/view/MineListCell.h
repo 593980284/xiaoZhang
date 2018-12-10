@@ -2,7 +2,7 @@
 //  MineListCell.h
 //  xiaoZhang
 //
-//  Created by 马滕亚 on 2018/12/8.
+//  Created by nick_beibei on 2018/12/8.
 //  Copyright © 2018年 胡胡超. All rights reserved.
 //
 
