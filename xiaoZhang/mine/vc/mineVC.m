@@ -85,17 +85,18 @@
     .bottomSpaceToView(headerView, 0)
     .heightIs(1);
     
-    MineListCell *cell = [[MineListCell alloc]initWithTitle:@"text"];
-    cell.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:cell];
-    
-    cell.sd_layout
-    .topSpaceToView(headerView, 20)
-    .leftSpaceToView(self.view, 10)
-    .rightSpaceToView(self.view, 10)
-    .heightIs(40*HC_750Ratio);
-    
-    
+    NSString *systemVersion = [NSString stringWithFormat:@"版本v%@",HC_appVersion];
+    NSArray *titleArray = @[@"清除缓存",systemVersion,@"关于我们"];
+    for (int i = 0; i<titleArray.count; i++) {
+        MineListCell *cell = [[MineListCell alloc]initWithTitle:titleArray[i]];
+        cell.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:cell];
+        cell.sd_layout
+        .topSpaceToView(headerView, 20+i*40*HC_750Ratio)
+        .leftSpaceToView(self.view, 10)
+        .rightSpaceToView(self.view, 10)
+        .heightIs(40*HC_750Ratio);
+    }
 }
 
 

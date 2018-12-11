@@ -9,6 +9,7 @@
 #ifndef ToolMacro_h
 #define ToolMacro_h
 
+#define  HC_appVersion     [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 #define  HC_systemVersion  [[UIDevice currentDevice].systemVersion floatValue]
 #define  HC_windowWidth    [UIScreen mainScreen].bounds.size.width
 #define  HC_windowHeight   [UIScreen mainScreen].bounds.size.height
