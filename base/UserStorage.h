@@ -7,13 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//"schoolId": 140000000111,
+//"phone": "18156069602",
+//"id": 1,
+//"photo": "files/lexiang/schoolmanagerImg/manager_18556506296.png?time=1542433330159",
+//"name": "lxadmin",
+//"schoolName": "实车测试驾校"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserModel : NSObject
 
-@property(nonatomic, strong)NSString * phone;
+@property(nonatomic, copy)NSString * schoolId;
+@property(nonatomic, copy)NSString * phone;
+@property(nonatomic, assign)NSInteger  ID;
+@property(nonatomic, copy)NSString * photo;
+@property(nonatomic, copy)NSString * name;
+@property(nonatomic, copy)NSString * schoolName;
 
 @end
 

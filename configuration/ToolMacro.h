@@ -9,6 +9,7 @@
 #ifndef ToolMacro_h
 #define ToolMacro_h
 
+#define  HC_appVersion     [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 #define  HC_systemVersion  [[UIDevice currentDevice].systemVersion floatValue]
 #define  HC_windowWidth    [UIScreen mainScreen].bounds.size.width
 #define  HC_windowHeight   [UIScreen mainScreen].bounds.size.height
@@ -17,9 +18,11 @@
 #define  HC_statusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define  HC_safeBottom     [[UIApplication sharedApplication] statusBarFrame].size.height == 44 ? 34 : 0
 #define  HC_naviHeight     [[UIApplication sharedApplication] statusBarFrame].size.height + 44
-#define  HC_tabBarHeight   (HC_iPhoneX ? (49.f+34.f) : 49.f)
-#define  HC_750Ratio       HC_windowWidth / 750.0
+#define  HC_tabBarHeight   (HC_iPhoneX || HC_iPhoneXS ? (49.f+34.f) : 49.f)
+#define  HC_750Ratio       (HC_windowWidth / 375.0)
+#define  HC_320Ratio       (HC_windowWidth / 320.0)
 #define  HC_750Font(x)     [UIFont systemFontOfSize:x / HC_750Ratio]
+#define  HC_320Font(x)     [UIFont systemFontOfSize:x / HC_320Ratio]
 #define  HC__weakSelf      __weak typeof(self) weakSelf = self;
 
 #define  NSStringFromInt(x) [NSString stringWithFormat:@"%ld", x]

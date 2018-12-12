@@ -9,6 +9,9 @@ pod 'MBProgressHUD'
 pod 'GKNavigationController'
 pod 'AAChartKit'
 pod 'SDAutoLayout'
+pod 'TPKeyboardAvoiding'
+pod 'DZNEmptyDataSet'
+pod 'BlocksKit'
 end
 
 

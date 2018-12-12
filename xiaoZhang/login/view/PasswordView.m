@@ -30,7 +30,7 @@
     }
     return self;
 }
-- (void)setCodeTF:(NSString *)codeApi
+- (void)setCodeApi:(NSString *)codeApi
 {
     _codeApi = codeApi;
     _codeBtn.api = codeApi;
@@ -39,7 +39,7 @@
 - (IBAction)commit:(id)sender {
     NSString * phone = _phoneTF.text;
     NSString * msgCode = _codeTF.text;
-    if (phone.reg_isPhone) {
+    if (phone.reg_isPhone == NO) {
         [MBProgressHUD showSuccess:@"请输入手机号"];
         return;
     }

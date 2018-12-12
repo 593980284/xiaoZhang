@@ -8,6 +8,8 @@
 
 #import "HomeVC.h"
 #import "HomeFormView.h"
+#import "LoginVC.h"
+#import "BaseNaviVC.h"
 @interface HomeVC ()
 @end
 
@@ -33,6 +35,13 @@
     label.text = @"111111";
     [self.view addSubview:label];
     label.frame = CGRectMake(100, 100, 100, 100);
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    BaseNaviVC* vc = [[BaseNaviVC alloc]initWithRootViewController:[LoginVC new]];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 /*
