@@ -9,7 +9,6 @@
 #import "HomeVC.h"
 #import "HomeFormView.h"
 @interface HomeVC ()
-
 @end
 
 @implementation HomeVC
@@ -17,13 +16,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    HomeFormView * dayFormView = [HomeFormView new];
-    [self.view addSubview:dayFormView];
-    dayFormView.sd_layout
-    .topSpaceToView(self.view, HC_naviHeight)
-    .leftSpaceToView(self.view, 15)
-    .rightSpaceToView(self.view, 15)
-    .heightIs(150);
+//    HomeFormView * dayFormView = [HomeFormView new];
+//    [self.view addSubview:dayFormView];
+//    dayFormView.sd_layout
+//    .topSpaceToView(self.view, HC_naviHeight)
+//    .leftSpaceToView(self.view, 15)
+//    .rightSpaceToView(self.view, 15)
+//    .heightIs(150);
+    
+    UILabel *label = [UILabel new];
+ 
+    label.hcTextBlock([UIColor redColor], [UIFont systemFontOfSize:13], 1)
+    .hcBorderBlock([UIColor blueColor], 1, YES)
+    .hcShadowBlock([UIColor blackColor], 0.5, 6, 6);
+    
+    label.text = @"111111";
+    [self.view addSubview:label];
+    label.frame = CGRectMake(100, 100, 100, 100);
 }
 
 /*

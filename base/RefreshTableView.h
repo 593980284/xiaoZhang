@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSDictionary* params;
 @property (nonatomic, assign) CGFloat cellHeight;
 @property (nonatomic, strong) Class cellClass;
+@property (nonatomic, assign) BOOL loadMoreData;
 
 @property (nonatomic, assign) CGFloat sectionHeight;
 @property (nonatomic, copy) NSString* sectionKey;

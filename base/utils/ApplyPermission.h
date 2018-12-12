@@ -11,7 +11,10 @@ typedef NS_ENUM(NSInteger,ApplyPermissionType)
 {
     ApplyPermissionTypeWhileLocation,
     ApplyPermissionTypeLocationAlways,
-    ApplyPermissionTypeAddressBook
+    ApplyPermissionTypeAddressBook,
+    ApplyPermissionTypePhoto,
+    ApplyPermissionTypeCamera,
+    ApplyPermissionTypeSavePhoto
 };
 @interface ApplyPermission : NSObject
 + (instancetype)sharedInstance;

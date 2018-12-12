@@ -22,6 +22,9 @@
 #define  HC_750Font(x)     [UIFont systemFontOfSize:x / HC_750Ratio]
 #define  HC__weakSelf      __weak typeof(self) weakSelf = self;
 
+#define  NSStringFromInt(x) [NSString stringWithFormat:@"%ld", x]
+#define  NSStringFromFloat(x) [NSString stringWithFormat:@"%lf", x]
+
 
 //单例化一个类
 #define SINGLETON_FOR_HEADER(className) \

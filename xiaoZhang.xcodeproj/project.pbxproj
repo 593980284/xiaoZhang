@@ -42,6 +42,7 @@
 		CD1363E921B3BBEB00754B0E /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1363E821B3BBEB00754B0E /* PasswordView.xib */; };
 		CD1363EC21B3D8ED00754B0E /* RefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1363EB21B3D8ED00754B0E /* RefreshTableView.m */; };
 		CD1365DB21BD223300754B0E /* UIImageView+Net.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1365DA21BD223300754B0E /* UIImageView+Net.m */; };
+		CD18D83521C111AD00F63836 /* UIView+chainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = CD18D83421C111AD00F63836 /* UIView+chainUI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,8 @@
 		CD1363EB21B3D8ED00754B0E /* RefreshTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshTableView.m; sourceTree = "<group>"; };
 		CD1365D921BD223300754B0E /* UIImageView+Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Net.h"; sourceTree = "<group>"; };
 		CD1365DA21BD223300754B0E /* UIImageView+Net.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Net.m"; sourceTree = "<group>"; };
+		CD18D83321C111AD00F63836 /* UIView+chainUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+chainUI.h"; sourceTree = "<group>"; };
+		CD18D83421C111AD00F63836 /* UIView+chainUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+chainUI.m"; sourceTree = "<group>"; };
 		E9DBF2627960920BBC44DAB3 /* Pods-xiaoZhang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaoZhang.release.xcconfig"; path = "Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -441,6 +444,7 @@
 		CD12CEDB21AD6F7800EFFC56 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				CD18D83221C1117D00F63836 /* chainUI */,
 				CD12CEE821AD7F4700EFFC56 /* utils */,
 				CD12CEE721AD7F0700EFFC56 /* category */,
 				CD12CEDF21AD7C3100EFFC56 /* netTool */,
@@ -504,6 +508,15 @@
 				CD13638721B2D79A00754B0E /* AddressBookUtils.m */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		CD18D83221C1117D00F63836 /* chainUI */ = {
+			isa = PBXGroup;
+			children = (
+				CD18D83321C111AD00F63836 /* UIView+chainUI.h */,
+				CD18D83421C111AD00F63836 /* UIView+chainUI.m */,
+			);
+			path = chainUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -685,6 +698,7 @@
 				CD12CEDE21AD700F00EFFC56 /* UserStorage.m in Sources */,
 				CD10319321AE66080017440A /* LoginVC.m in Sources */,
 				CD1363EC21B3D8ED00754B0E /* RefreshTableView.m in Sources */,
+				CD18D83521C111AD00F63836 /* UIView+chainUI.m in Sources */,
 				CD1365DB21BD223300754B0E /* UIImageView+Net.m in Sources */,
 				CD10316521AE47E50017440A /* TabBarController.m in Sources */,
 				CD10320821B0042E0017440A /* ApplyPermission.m in Sources */,

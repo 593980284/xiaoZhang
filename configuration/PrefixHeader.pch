@@ -23,4 +23,5 @@
 #import "MBProgressHUD+PD.h"//提示框
 #import "NSString+Regular.h"//正则
 #import "UIImageView+Net.h"//图片加载
+#import "UIView+chainUI.h"
 #endif /* PrefixHeader_pch */
