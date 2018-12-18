@@ -92,10 +92,10 @@
         cell.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:cell];
         cell.sd_layout
-        .topSpaceToView(headerView, 20+i*40*HC_750Ratio)
+        .topSpaceToView(headerView, 20+i*40*HC_320Ratio)
         .leftSpaceToView(self.view, 10)
         .rightSpaceToView(self.view, 10)
-        .heightIs(40*HC_750Ratio);
+        .heightIs(40*HC_320Ratio);
     }
 }
 

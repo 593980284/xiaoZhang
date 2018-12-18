@@ -45,7 +45,7 @@
         _titleLb.sd_layout
         .topSpaceToView(self, 5)
         .bottomSpaceToView(self, 5)
-        .leftSpaceToView(self, 10*HC_750Ratio)
+        .leftSpaceToView(self, 10*HC_320Ratio)
         .rightSpaceToView(self, 50);
         [self initData];
         
@@ -55,7 +55,7 @@
 
 - (void)initData
 {
-    self.font = HC_750Font(10);
+    self.font = HC_320Font(10);
     self.textColor = TitleColor_333;
 }
 
