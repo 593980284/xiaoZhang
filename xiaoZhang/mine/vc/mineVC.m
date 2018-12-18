@@ -8,6 +8,7 @@
 
 #import "mineVC.h"
 #import "MineListCell.h"
+#import "MineView.h"
 
 @interface mineVC ()
 @property(nonatomic, weak)UIImageView *headerImgView;
@@ -87,16 +88,15 @@
     
     NSString *systemVersion = [NSString stringWithFormat:@"版本v%@",HC_appVersion];
     NSArray *titleArray = @[@"清除缓存",systemVersion,@"关于我们"];
-    for (int i = 0; i<titleArray.count; i++) {
-        MineListCell *cell = [[MineListCell alloc]initWithTitle:titleArray[i]];
-        cell.backgroundColor = [UIColor whiteColor];
-        [self.view addSubview:cell];
-        cell.sd_layout
-        .topSpaceToView(headerView, 20+i*40*HC_320Ratio)
-        .leftSpaceToView(self.view, 10)
-        .rightSpaceToView(self.view, 10)
-        .heightIs(40*HC_320Ratio);
-    }
+    CGFloat cellHeight = 40;
+    MineView *mineView = [[MineView alloc] initWithCellArray:titleArray withCellHeight:cellHeight];
+    [self.view addSubview:mineView];
+    mineView.backgroundColor = [UIColor whiteColor];
+    mineView.sd_layout
+    .topSpaceToView(headerView, 20)
+    .leftSpaceToView(self.view, 10)
+    .rightSpaceToView(self.view, 10)
+    .heightIs(titleArray.count*cellHeight*HC_320Ratio);
 }
 
 

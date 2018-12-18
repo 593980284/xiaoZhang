@@ -10,6 +10,7 @@
 		09DA4B554FF6CDBB79AD39B0 /* libPods-xiaoZhang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AD148538692D278D7067B0 /* libPods-xiaoZhang.a */; };
 		981279F121B96BFC00F79683 /* AddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 981279F021B96BFC00F79683 /* AddressBookCell.m */; };
 		98C13F1721BBEEFF009FA39E /* MineListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C13F1621BBEEFF009FA39E /* MineListCell.m */; };
+		B262B69B21C91BC800D6CDAB /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B262B69A21C91BC800D6CDAB /* MineView.m */; };
 		CD10316221AE46820017440A /* UINavigationController+Autorotate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316121AE46820017440A /* UINavigationController+Autorotate.m */; };
 		CD10316521AE47E50017440A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316421AE47E50017440A /* TabBarController.m */; };
 		CD10316821AE487F0017440A /* BaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10316721AE487F0017440A /* BaseNaviVC.m */; };
@@ -70,6 +71,8 @@
 		9851A7A6BF6236B94E51B883 /* Pods-xiaoZhang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaoZhang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xiaoZhang/Pods-xiaoZhang.debug.xcconfig"; sourceTree = "<group>"; };
 		98C13F1521BBEEFF009FA39E /* MineListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineListCell.h; sourceTree = "<group>"; };
 		98C13F1621BBEEFF009FA39E /* MineListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineListCell.m; sourceTree = "<group>"; };
+		B262B69921C91BC800D6CDAB /* MineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
+		B262B69A21C91BC800D6CDAB /* MineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineView.m; sourceTree = "<group>"; };
 		CD10316021AE46820017440A /* UINavigationController+Autorotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Autorotate.h"; sourceTree = "<group>"; };
 		CD10316121AE46820017440A /* UINavigationController+Autorotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Autorotate.m"; sourceTree = "<group>"; };
 		CD10316321AE47E50017440A /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 			children = (
 				98C13F1521BBEEFF009FA39E /* MineListCell.h */,
 				98C13F1621BBEEFF009FA39E /* MineListCell.m */,
+				B262B69921C91BC800D6CDAB /* MineView.h */,
+				B262B69A21C91BC800D6CDAB /* MineView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				CD1363E121B3B06600754B0E /* TimerBtn.m in Sources */,
 				CD12CEA521AD65A300EFFC56 /* AppDelegate.m in Sources */,
 				981279F121B96BFC00F79683 /* AddressBookCell.m in Sources */,
+				B262B69B21C91BC800D6CDAB /* MineView.m in Sources */,
 				CD10319D21AE67D30017440A /* DemoVC.m in Sources */,
 				CD1363E421B3B58D00754B0E /* NSString+Regular.m in Sources */,
 				CD10320421AEC8880017440A /* NSObject+HCCategory.m in Sources */,
