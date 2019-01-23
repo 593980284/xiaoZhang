@@ -11,6 +11,7 @@
 #import "LoginVC.h"
 #import "BaseNaviVC.h"
 @interface HomeVC ()
+@property(nonatomic, weak)UILabel *label;
 @end
 
 @implementation HomeVC
@@ -26,22 +27,33 @@
 //    .rightSpaceToView(self.view, 15)
 //    .heightIs(150);
     
-    UILabel *label = [UILabel new];
+    UIImageView *label = [UIImageView new];
  
-    label.hcTextBlock([UIColor redColor], [UIFont systemFontOfSize:13], 1)
-    .hcBorderBlock([UIColor blueColor], 1, YES)
-    .hcShadowBlock([UIColor blackColor], 0.5, 6, 6);
+    label.hcBorderBlock([UIColor blueColor], 1)//设置边框颜色、宽度
+    .hcCornerRadiusBlock(5, NO)//圆角、超出部分是否显示
+    .hcTextBlock([UIColor blackColor], [UIFont systemFontOfSize:16], 1)//字体颜色、大小、对齐
+    .hcShadowBlock([UIColor blackColor], 0.5, 6, 6)//阴影颜色、透明度、偏移
+    .hcBgColorBlock([UIColor yellowColor])//背景色
+    .hcTapBlock(self, @selector(tap:))
+    .hcImageBlock(@"header");
     
-    label.text = @"111111";
+   
     [self.view addSubview:label];
     label.frame = CGRectMake(100, 100, 100, 100);
 
 }
 
+- (void)dealloc {
+    
+}
+
+- (void)tap:(UIButton *)sender{
+    NSLog(@"111");
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    BaseNaviVC* vc = [[BaseNaviVC alloc]initWithRootViewController:[LoginVC new]];
-    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 
 /*
