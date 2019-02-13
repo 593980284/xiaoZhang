@@ -1,14 +1,14 @@
 //
-//  HomeFormView.m
+//  MineListItem.m
 //  xiaoZhang
 //
-//  Created by 胡胡超 on 2019/2/6.
+//  Created by 胡胡超 on 2019/1/23.
 //  Copyright © 2019年 胡胡超. All rights reserved.
 //
 
-#import "HomeFormView.h"
+#import "MineListItem.h"
 
-@implementation HomeFormView
+@implementation MineListItem
 
 /*
 // Only override drawRect: if you perform custom drawing.

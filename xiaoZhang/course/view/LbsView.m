@@ -1,14 +1,14 @@
 //
-//  HomeFormView.m
+//  LbsView.m
 //  xiaoZhang
 //
-//  Created by 胡胡超 on 2019/2/6.
+//  Created by 胡胡超 on 2019/2/12.
 //  Copyright © 2019年 胡胡超. All rights reserved.
 //
 
-#import "HomeFormView.h"
+#import "LbsView.h"
 
-@implementation HomeFormView
+@implementation LbsView
 
 /*
 // Only override drawRect: if you perform custom drawing.

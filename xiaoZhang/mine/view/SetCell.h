@@ -1,8 +1,8 @@
 //
-//  HomeFormView.h
+//  SetCell.h
 //  xiaoZhang
 //
-//  Created by 胡胡超 on 2019/2/6.
+//  Created by 胡胡超 on 2019/1/25.
 //  Copyright © 2019年 胡胡超. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeFormView : UIView
+@interface SetCell : UIView
 
 @end
 
