@@ -21,6 +21,7 @@
 
 - (void)setImageWithImageString:(NSString *)imageString placeholder:(UIImage *)placeholder{
     if (imageString.length > 0 == NO) {
+        self.image = placeholder;
         return;
     }
     if ([imageString hasPrefix:@"http"] == NO) {//如果不带http的

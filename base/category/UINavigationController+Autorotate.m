@@ -8,6 +8,17 @@
 
 #import "UINavigationController+Autorotate.h"
 
+@implementation UINavigationController (Pop)
+- (void)popWithStep:(NSInteger)step
+           animated:(BOOL)animated
+{
+    if (step < 1 || self.viewControllers.count < step+1) {
+        return;
+    }
+    [self.navigationController popToViewController:self.viewControllers[self.viewControllers.count - step] animated:animated];
+}
+@end
+
 @implementation UINavigationController (Autorotate)
 - (BOOL)shouldAutorotate
 {

@@ -10,6 +10,8 @@
 #import "PasswordView.h"
 #import "LoginApi.h"
 #import <TPKeyboardAvoidingScrollView.h>
+#import "AppDelegate.h"
+#import "TabBarController.h"
 
 @interface LoginVC ()
 @property(nonatomic, weak)PasswordView * passwordView;
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navBarAlpha = 0;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setUI];
 }
 
@@ -29,51 +32,47 @@
     [self.view addSubview:scrollView];
     scrollView.sd_layout
     .spaceToSuperView(UIEdgeInsetsMake(HC_naviHeight, 0, 0, 0));
-    
-    // logo
-    UIImageView *logoImgView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    logoImgView.backgroundColor = [UIColor greenColor];
-    [scrollView addSubview:logoImgView];
-    logoImgView.sd_layout
-    .topSpaceToView(scrollView, 35*HC_320Ratio)
-    .centerXEqualToView(scrollView)
-    .heightIs(100*HC_320Ratio)
-    .widthEqualToHeight();
-    
-    NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
-    style.lineSpacing = 5;
-    style.alignment = 1;
-    NSAttributedString * attrStr = [[NSAttributedString alloc]
-                                    initWithString:@"乐享学驾\n校长版"
-                                    attributes:@{
-                                                 NSFontAttributeName: HC_320Font(24),
-                                                 NSForegroundColorAttributeName: TitleColor_333,
-                                                 NSParagraphStyleAttributeName: style
-                                                 }];
+
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    textLabel.numberOfLines = 2;
-    textLabel.attributedText = attrStr;
+    textLabel.hcTextBlock(TitleColor_333, [UIFont systemFontOfSize:22], 0);
+    textLabel.text=@"欢迎登录乐享学驾校长端";
     [scrollView addSubview:textLabel];
     textLabel.sd_layout
-    .topSpaceToView(logoImgView, 10*HC_320Ratio)
-    .centerXEqualToView(scrollView)
+    .topSpaceToView(scrollView, 30*HC_320Ratio)
+    .leftSpaceToView(scrollView, 15)
     .widthIs(HC_windowWidth)
     .heightIs(64*HC_320Ratio);
     
     PasswordView * passwordView = [PasswordView new];
+    //取上次登录的手机号
+    passwordView.phoneTF.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"userPhone"];
     passwordView.codeApi = LoginApi_Code;
     passwordView.commitApi = LoginApi_testLogin;
     HC__weakSelf;
     passwordView.finishBlock = ^(NSDictionary *data) {
         [[UserStorage shareInstance] saveUserData:data];
-        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:nil];
+        //保存登录的手机号
+        NSString *phone = @"";
+        if (data[@"phone"]) {
+            phone = data[@"phone"];
+        }
+        [[NSUserDefaults standardUserDefaults] setValue:phone forKey:@"userPhone"];
+        
+        AppDelegate * delegagte =  (AppDelegate *) [UIApplication sharedApplication].delegate;
+        if (delegagte.window.rootViewController == self) {
+            TabBarController *tabBar = [TabBarController new];
+            delegagte.window.rootViewController = tabBar;
+        }else{
+            [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        }
     };
     [scrollView addSubview:passwordView];
     passwordView.sd_layout
-    .topSpaceToView(scrollView, 250)
+    .topSpaceToView(textLabel, 68*HC_360Ratio)
     .leftSpaceToView(scrollView, 0)
     .rightSpaceToView(scrollView, 0)
-    .heightIs(200);
+    .heightIs(200 + 35);
     
     [scrollView setupAutoContentSizeWithBottomView:passwordView bottomMargin:0];
 }

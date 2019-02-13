@@ -9,9 +9,13 @@
 #import "BaseVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef NS_ENUM(NSInteger, ModifyPhoneStep) {
+    ModifyPhoneStepOne,
+    ModifyPhoneStepTwo
+    
+};
 @interface ModifyPhoneVC : BaseVC
-
+@property(nonatomic, assign) ModifyPhoneStep step;
 @end
 
 NS_ASSUME_NONNULL_END

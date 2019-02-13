@@ -19,20 +19,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    TabBarController *tabBar = [TabBarController new];
-//    LoginVC *tabBar = [[LoginVC alloc] init];
-    self.window.rootViewController = tabBar;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     [self configNav];
-     if (@available(iOS 11.0, *)) {
+    if (@available(iOS 11.0, *)) {
         [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-     }
+    }
+    //判断显示登录页，还是主页
+    if ([[UserStorage shareInstance] getUserModel]) {
+        TabBarController *tabBar = [TabBarController new];
+        self.window.rootViewController = tabBar;
+    }else{
+        LoginVC *loginVC = [[LoginVC alloc] init];
+        self.window.rootViewController = loginVC;
+    }
     return YES;
 }
 
 - (void)configNav{
-   // [UINavigationBar appearance].translucent = NO;
+//   [UINavigationBar appearance].translucent = NO;
 }
 
 

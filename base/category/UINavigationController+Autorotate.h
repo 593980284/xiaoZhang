@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface UINavigationController (Pop)
+- (void)popWithStep:(NSInteger)step
+           animated:(BOOL)animated;
+@end
 
 @interface UITabBarController (Autorotate)
 

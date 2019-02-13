@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeTopView : UIView
-
+-(instancetype)initWithTitles:(NSArray *)titles;
+@property(nonatomic, strong)NSArray *values;
 @end
 
 NS_ASSUME_NONNULL_END

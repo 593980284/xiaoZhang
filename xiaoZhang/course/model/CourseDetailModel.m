@@ -9,5 +9,11 @@
 #import "CourseDetailModel.h"
 
 @implementation CourseDetailModel
++ (nullable NSDictionary<NSString *, id> *)modelContainerPropertyGenericClass
+{
+    return  @{@"list":[StudentModel class]};
+}
+@end
+@implementation StudentModel
 
 @end

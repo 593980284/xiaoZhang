@@ -14,6 +14,7 @@
 #import <YYKit.h>
 #import <SDAutoLayout.h>//布局库
 #import <UIView+SDExtension.h>// view.sd_height -> view.frame.size.height
+#import <MJRefresh/MJRefresh.h>
 //#import <UIScrollView+TPKeyboardAvoidingAdditions.h>
 
 #import "Constant.h"//常量宏定义-域名、appkey等
@@ -25,4 +26,11 @@
 #import "NSString+Regular.h"//正则
 #import "UIImageView+Net.h"//图片加载
 #import "UIView+chainUI.h"//链式给UI设置样式
+#import "UIViewController+HCCategory.h"
+#import "UINavigationController+Autorotate.h"
+
+#import "LoginApi.h"
+#import "CourseApi.h"
+#import "MineApi.h"
+#import "HomeApi.h"
 #endif /* PrefixHeader_pch */

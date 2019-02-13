@@ -6,8 +6,8 @@
 //  Copyright © 2019年 胡胡超. All rights reserved.
 // height 100， top 5  中 93  bottom 2
 
-#import "CoachTableViewCell.h"
-@interface CoachTableViewCell()
+#import "CourseTableViewCell.h"
+@interface CourseTableViewCell()
 @property(nonatomic, strong)UIImageView *headImgView;
 @property(nonatomic, strong)UIImageView *sexImgView;
 @property(nonatomic, strong)UIImageView *idImgView_1;
@@ -17,7 +17,7 @@
 @property(nonatomic, strong)UILabel *timeLb;
 @property(nonatomic, strong)UILabel *numLb;
 @end
-@implementation CoachTableViewCell
+@implementation CourseTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

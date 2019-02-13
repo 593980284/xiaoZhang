@@ -68,4 +68,15 @@ static NSString * storageSubPath = @"/Documents/userData_HC_";
 - (void)removeUserData{
     [_storage removeAllItems];
 }
+
+- (void)saveUserDataWithValue:(id)Value forKey:(NSString *)key
+{
+    if (!Value || !key) {
+        return;
+    }
+    
+    UserModel *model = [self getUserModel];
+    [model setValue:Value forKey:key];
+    [self saveUserData:model];
+}
 @end

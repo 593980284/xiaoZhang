@@ -19,31 +19,41 @@ typedef UIView *(^ButtonTextBlock_hc)(UIColor *textColor, NSString *title, UIFon
 @interface UIView (chainUI)
 //所有UIView
 /** 设置阴影 */
-- (ShadowBlock_hc)hcShadowBlock;
+//- (ShadowBlock_hc)hcShadowBlock;
+@property(nonatomic,assign, readonly)ShadowBlock_hc hcShadowBlock;
 /** 设置边框 */
-- (BorderBlock_hc)hcBorderBlock;
+//- (BorderBlock_hc)hcBorderBlock;
+@property(nonatomic,assign, readonly)BorderBlock_hc hcBorderBlock;
 /** 设置圆角 */
-- (CornerRadiusBlock_hc)hcCornerRadiusBlock;
+//- (CornerRadiusBlock_hc)hcCornerRadiusBlock;
+@property(nonatomic,assign, readonly)CornerRadiusBlock_hc hcCornerRadiusBlock;
 /** 设置背景色 */
-- (ColorBlock_hc)hcBgColorBlock;
+//- (ColorBlock_hc)hcBgColorBlock;
+@property(nonatomic,assign, readonly)ColorBlock_hc hcBgColorBlock;
 /** 设置点击事件 */
-- (TapBlock_hc)hcTapBlock;
+//- (TapBlock_hc)hcTapBlock;
+@property(nonatomic,assign, readonly)TapBlock_hc hcTapBlock;
 
 //UILabel及子类
 /** 设置text*/
-- (TextBlock_hc)hcTextBlock;
+//- (TextBlock_hc)hcTextBlock;
+@property(nonatomic,assign, readonly)TextBlock_hc hcTextBlock;
 
 //UIImageView及子类
 /** 设置图片 */
-- (StringBlock_hc)hcImageBlock;
+//- (StringBlock_hc)hcImageBlock;
+@property(nonatomic,assign, readonly)StringBlock_hc hcImageBlock;
 
 //UIButton
 /** 设置按钮正常文字*/
-- (ButtonTextBlock_hc)hcNomalTextBlock;
+//- (ButtonTextBlock_hc)hcNomalTextBlock;
+@property(nonatomic,assign, readonly)ButtonTextBlock_hc hcNomalTextBlock;
 /** 设置按钮选中文字 */
-- (ButtonTextBlock_hc)hcSelectTextBlock;
+//- (ButtonTextBlock_hc)hcSelectTextBlock;
+@property(nonatomic,assign, readonly)ButtonTextBlock_hc hcSelectTextBlock;
 /** 设置按钮不可用文字 */
-- (ButtonTextBlock_hc)hcDisabledTextBlock;
+//- (ButtonTextBlock_hc)hcDisabledTextBlock;
+@property(nonatomic,assign, readonly)ButtonTextBlock_hc hcDisabledTextBlock;
 @end
 
 

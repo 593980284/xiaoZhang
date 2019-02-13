@@ -9,5 +9,7 @@
 #ifndef HomeApi_h
 #define HomeApi_h
 
+#define HomeApi_home @"schoolmaster/homeInfo"
+#define HomeApi_tsetQuality @"schoolmaster/studentExamQualityStatistics"
 
 #endif /* HomeApi_h */

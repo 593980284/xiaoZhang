@@ -12,6 +12,9 @@ pod 'SDAutoLayout'
 pod 'TPKeyboardAvoiding'
 pod 'DZNEmptyDataSet'
 pod 'BlocksKit'
+pod 'CBImagePicker'
+pod 'MJRefresh'
+pod 'Masonry'
 end
 
 

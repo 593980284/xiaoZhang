@@ -7,11 +7,11 @@
 //
 
 #import "BaseVC.h"
-
+#import "CourseModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CourseDetailVC : BaseVC
-
+@property(nonatomic, strong)CourseModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeFormView : UIView
-
+-(instancetype)initWithTitle:(NSString *)title;
+@property(nonatomic, strong)NSArray *values;
+@property(nonatomic, copy)void(^tapBlock)(NSInteger index);
 @end
 
 NS_ASSUME_NONNULL_END

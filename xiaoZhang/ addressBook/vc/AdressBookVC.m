@@ -27,7 +27,7 @@ NSString *const CYPinyinGroupCharArray = @"CYPinyinGroupCharArray";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.title = @"通讯录";
     _alphabetArray = [[NSMutableArray alloc] init];
     _addressBookArray = [[NSMutableArray alloc] init];
     [self setUI];
@@ -37,6 +37,7 @@ NSString *const CYPinyinGroupCharArray = @"CYPinyinGroupCharArray";
         NSDictionary *dcit= [self sortObjectsAccordingToInitialWith:array SortKey:@"name"];
         weakSelf.addressBookArray = dcit[CYPinyinGroupResultArray];//排好顺序的PersonModel数组
         weakSelf.alphabetArray = dcit[CYPinyinGroupCharArray];//排好顺序的首字母数组
+        [_myTableView reloadData];
 
     }];
 }
@@ -46,6 +47,7 @@ NSString *const CYPinyinGroupCharArray = @"CYPinyinGroupCharArray";
     [_myTableView registerClass:[AddressBookCell class] forCellReuseIdentifier:@"myCellId"];
     _myTableView.dataSource = self;
     _myTableView.delegate = self;
+    _myTableView.tableFooterView = [UIView new];
     [self.view addSubview:_myTableView];
     _myTableView.sd_layout
     .spaceToSuperView(UIEdgeInsetsMake(HC_naviHeight, 0, 0, 0));
@@ -165,8 +167,8 @@ NSString *const CYPinyinGroupCharArray = @"CYPinyinGroupCharArray";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, HC_windowWidth, 30)];
-    label.backgroundColor = [UIColor lightGrayColor];
-    label.text = [NSString stringWithFormat:@"%@",_alphabetArray[section]];
+    label.backgroundColor = HexColor(@"dddddd");
+    label.text = [NSString stringWithFormat:@"   %@",_alphabetArray[section]];
     return label;
 }
 

@@ -22,9 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 设置导航栏的透明度 */
 @property (nonatomic, assign) CGFloat navBarAlpha;
+
+@property (nonatomic, strong)UIColor *titleColor;
 //
 //// 自定义返回item
 //- (UIBarButtonItem *)gk_customBackItemWithTarget:(id)target action:(SEL)action;
+
 @end
 
 NS_ASSUME_NONNULL_END

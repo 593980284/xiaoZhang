@@ -10,7 +10,7 @@
 #import "CourseModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CoachTableViewCell : UITableViewCell
+@interface CourseTableViewCell : UITableViewCell
 @property(nonatomic, strong)CourseModel* model;
 @end
 

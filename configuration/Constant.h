@@ -19,11 +19,15 @@
 #endif
 
 #define HexColor(x)  [UIColor colorWithHexString:x]
+#define SystemFont(x)  [UIFont systemFontOfSize:x]
+#define Font(x,y)  [UIFont systemFontOfSize:x weight:y]
+#define BlueColor [UIColor colorWithHexString:@"#4498FF"]
+#define MainColor [UIColor colorWithHexString:@"#FFFFFF"]
 #define LineColor    [UIColor colorWithHexString:@"aaaaaa"]
 #define TitleColor_333   [UIColor colorWithHexString:@"333333"]
 #define DetialColor_666   [UIColor colorWithHexString:@"666666"]
 #define PlaceholderColor_333   [UIColor colorWithHexString:@"999999"]
-#define PlaceholderImage   [UIImage imageNamed:@""]
+#define PlaceholderImage   [UIImage imageNamed:@"placeholderimg"]
 #define LineHeight   0.5
 
 #endif /* Constant_h */

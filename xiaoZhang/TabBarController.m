@@ -23,19 +23,21 @@
 - (void)addChildViewController {
     NSArray *itemControllerArray = @[@"HomeVC", @"CourseVC", @"AdressBookVC", @"mineVC"];
     NSArray *itemTitleArray = @[@"首页", @"课程", @"通讯录", @"我的"];
-    NSArray *itemImageArray = @[@"lx_tabbar_class_normal", @"lx_tabbar_news_normal", @"lx_tabbar_student_normal", @"lx_tabbar_mine_normal"];
-    NSArray *itemSelectImageArray = @[@"lx_tabbar_class_select", @"lx_tabbar_news_select", @"lx_tabbar_student_select", @"lx_tabbar_mine_select"];
+    NSArray *itemImageArray = @[@"tab_1_u", @"tab_2_u", @"tab_3_u", @"tab_4_u"];
+    NSArray *itemSelectImageArray = @[@"tab_1_s", @"tab_2_s", @"tab_3_s", @"tab_4_s"];
     NSMutableArray *controllersArray = [NSMutableArray new];
     for (NSInteger i = 0; i < [itemControllerArray count]; i++) {
         UIViewController *vc = [NSClassFromString(itemControllerArray[i]) new];
         BaseNaviVC *naviVC = [[BaseNaviVC alloc]initWithRootViewController:vc];
         naviVC.tabBarItem.title = itemTitleArray[i];
+        naviVC.tabBarItem.selectedImage = [UIImage imageNamed: itemSelectImageArray[i]];
+        naviVC.tabBarItem.image  = [UIImage imageNamed: itemImageArray[i]];
         [controllersArray addObject:naviVC];
     }
     // 加入子控制器
     self.viewControllers = [NSArray arrayWithArray:controllersArray];
     self.selectedIndex = 0;
-    [self.tabBar setTintColor:[UIColor colorWithHexString:@"#309CF5"]];
+    [self.tabBar setTintColor:BlueColor];
     self.tabBar.backgroundColor = [UIColor whiteColor];
     self.tabBar.backgroundImage = [UIImage imageWithColor:[UIColor colorWithHexString:@"#FFFFFF"]];
     // 未选中字体

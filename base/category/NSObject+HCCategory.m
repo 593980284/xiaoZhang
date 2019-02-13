@@ -18,4 +18,6 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     return [appDelegate.window.rootViewController gk_visibleViewControllerIfExist];
 }
+
+
 @end

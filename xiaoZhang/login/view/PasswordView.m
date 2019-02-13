@@ -25,8 +25,6 @@
         _codeBtn.phoneBlock = ^NSString *{
             return weakSelf.phoneTF.text;
         };
-        self.codeTF.text = @"222";
-        self.phoneTF.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"userPhone"];
     }
     return self;
 }
@@ -49,7 +47,7 @@
     }
   
     [NetWorkTool requestWithURL:self.commitApi params:@{@"phone": phone, @"msgCode": msgCode} toModel:nil success:^(id result) {
-         [[NSUserDefaults standardUserDefaults] setValue:phone forKey:@"userPhone"];
+//         [[NSUserDefaults standardUserDefaults] setValue:phone forKey:@"userPhone"];
         self.finishBlock(result);
     } failure:^(NSString *msg, NSInteger code) {
          [MBProgressHUD showSuccess:msg];

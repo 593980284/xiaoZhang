@@ -15,4 +15,12 @@
     NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
     return [regextestmobile evaluateWithObject:self];
 }
+
+- (BOOL)isEmpty
+{
+    if (self == nil || self.length == 0) {
+        return YES;
+    }
+    return NO;
+}
 @end

@@ -9,5 +9,9 @@
 #ifndef CourseApi_h
 #define CourseApi_h
 
+#define CourseApi_dateList         @"schoolmasterCourse/findDateList"
+#define CourseApi_course           @"schoolmasterCourse/findAppointmentListByDate"
+#define CourseApi_courseDetail     @"schoolmasterCourse/findAppointmentDetail"
+#define CourseApi_courseEvaluation @"schoolmasterCourse/findStudentEvaluation"
 
 #endif /* CourseApi_h */

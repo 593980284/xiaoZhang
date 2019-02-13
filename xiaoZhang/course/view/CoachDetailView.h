@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
+#import "CourseDetailModel.h"
+#import "CourseModel.h"
 @interface CoachDetailView : UIView
-
+@property(nonatomic, strong)CourseModel *courseModel;
+@property(nonatomic, strong)CourseDetailModel *courseDetailModel;
 @end
 
-NS_ASSUME_NONNULL_END
+

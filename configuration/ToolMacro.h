@@ -21,12 +21,18 @@
 #define  HC_tabBarHeight   (HC_iPhoneX || HC_iPhoneXS ? (49.f+34.f) : 49.f)
 #define  HC_750Ratio       (HC_windowWidth / 375.0)
 #define  HC_320Ratio       (HC_windowWidth / 320.0)
+#define  HC_360Ratio       (HC_windowWidth / 360.0)
 #define  HC_750Font(x)     [UIFont systemFontOfSize:x / HC_750Ratio]
 #define  HC_320Font(x)     [UIFont systemFontOfSize:x / HC_320Ratio]
+#define  HC_360Font(x)     [UIFont systemFontOfSize:x / HC_360Ratio]
 #define  HC__weakSelf      __weak typeof(self) weakSelf = self;
 
 #define  NSStringFromInt(x) [NSString stringWithFormat:@"%ld", x]
 #define  NSStringFromFloat(x) [NSString stringWithFormat:@"%lf", x]
+
+#define  RemoveObserver(name)  [[NSNotificationCenter defaultCenter] removeObserver:self name:name object:nil]
+
+#define AddObserver(SEL, name)  [[NSNotificationCenter defaultCenter] addObserver:self selector:SEL  name:name object:nil]
 
 
 //单例化一个类

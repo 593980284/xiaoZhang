@@ -8,6 +8,8 @@
 
 #ifndef MineApi_h
 #define MineApi_h
-
-
+#define MineApi_uploadHead  @"headmasterSetting/uploadHeadmasterImage"
+#define MineApi_signOut  @"login/appHeadmasterLogout"
+#define MineApi_checkOldPhone  @"headmasterSetting/appHeadmasterCheckOldPhone"
+#define MineApi_checkNewPhone  @"headmasterSetting/appHeadmasterCheckNewPhone"
 #endif /* MineApi_h */

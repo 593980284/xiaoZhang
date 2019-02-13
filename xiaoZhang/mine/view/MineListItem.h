@@ -11,7 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MineListItem : UIView
-
+- (instancetype)initWithImageStr:(NSString *)imageStr
+                           title:(NSString *)title
+                          target:(id)target
+                             sel:(SEL)sel;
 @end
 
 NS_ASSUME_NONNULL_END

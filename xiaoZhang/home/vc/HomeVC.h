@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-
-@interface HomeVC : UIViewController
+#import "BaseVC.h"
+@interface HomeVC : BaseVC
 
 @end
 

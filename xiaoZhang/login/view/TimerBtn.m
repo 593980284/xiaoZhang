@@ -65,11 +65,11 @@
 - (void)initData
 {
     self.seconds = 60;
-    self.availableColor = HexColor(@"666666");
+    self.availableColor = HexColor(@"4498FF");
     self.unavailableColor = HexColor(@"999999");
     self.titleLabel.font = [UIFont systemFontOfSize:13];
-    self.layer.borderWidth = 0.5;
-    self.layer.cornerRadius = 5;
+//    self.layer.borderWidth = 0.5;
+//    self.layer.cornerRadius = 5;
     self.clipsToBounds = YES;
     self.enabled = YES;
     [self setTitle:@"获取验证码" forState:0];

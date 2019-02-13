@@ -73,6 +73,7 @@
             { ///成功就返回结果
                 id model = nil;
                 id data = responseObject[@"data"];
+                 NSLog(@"请求结果：\n%@",data);
                 if (modelClass != nil) {
                     if ([data isKindOfClass:[NSArray class]]) {
                         model = [NSArray modelArrayWithClass:modelClass json:data];
@@ -87,6 +88,7 @@
             }
             case -2:
             { ///用户信息失效
+                 NSLog(@"请求结果：\n用户信息失效");
                 if([[self getCurrentVC] isMemberOfClass:[LoginVC class]] == NO){
                     LoginVC *vc = [LoginVC new];
                     [[self getCurrentVC] presentViewController:[[BaseNaviVC alloc]initWithRootViewController:vc] animated:YES completion:nil];
@@ -96,6 +98,7 @@
             }
 
             default:///其他情况返回error
+                NSLog(@"请求结果：\n%@",responseObject[@"msg"]);
                 errorBlock(responseObject[@"msg"], code);
                 break;
         }
@@ -125,11 +128,13 @@
             [hub hideAnimated:YES];
         }
         NSInteger code = [responseObject[@"flg"] integerValue];
+        NSLog(@"================%@请求=====================\n\n%@\n\n",url,parmas);
         switch (code) {
             case 1:
             { ///成功就返回结果
                 id model = nil;
                 id data = responseObject[@"data"];
+                NSLog(@"请求结果：\n%@",data);
                 if (modelClass != nil) {
                     if ([data isKindOfClass:[NSArray class]]) {
                         model = [NSArray modelArrayWithClass:modelClass json:data];
@@ -144,6 +149,7 @@
             }
             case -2:
             { ///用户信息失效
+                 NSLog(@"请求结果：\n用户信息失效");
                 if([[self getCurrentVC] isMemberOfClass:[LoginVC class]] == NO){
                     LoginVC *vc = [LoginVC new];
                     [[self getCurrentVC] presentViewController:[[BaseNaviVC alloc]initWithRootViewController:vc] animated:YES completion:nil];
@@ -153,6 +159,7 @@
             }
                 
             default:///其他情况返回error
+                NSLog(@"请求结果：\n%@",responseObject[@"msg"]);
                 errorBlock(responseObject[@"msg"], code);
                 break;
         }

@@ -16,14 +16,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    self.view.backgroundColor = HexColor(@"f5f5f5");
+    self.navigationController.navigationBar.barTintColor = MainColor;
+    self.titleColor = TitleColor_333;
     if (HC_systemVersion < 11) {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     // Do any additional setup after loading the view.
 }
 /** 横竖屏幕 ***********************************************/
+- (void)setTitleColor:(UIColor *)titleColor
+{
+    _titleColor = titleColor;
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : titleColor,
+                                                                      NSFontAttributeName : [UIFont fontWithName:@"Helvetica-Bold" size:17]}];
+}
 - (BOOL)shouldAutorotate
 {
     return NO;

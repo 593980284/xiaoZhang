@@ -15,4 +15,8 @@
  */
 - (UIViewController *)gk_visibleViewControllerIfExist;
 
+- (void)alertWithTitle:(NSString *)title
+               message:(NSString *)message
+             sureTitle:(NSString *)sureTitle
+               handler:(void (^ __nullable)(UIAlertAction *action))handler;
 @end

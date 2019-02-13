@@ -25,6 +25,15 @@
         if ([viewController isKindOfClass:[GKWrapViewController class]]) {
             GKWrapViewController *vc = (GKWrapViewController *)viewController;
             vc.contentViewController.hidesBottomBarWhenPushed = YES;
+            
+            UIButton *btn = [UIButton new];
+            btn.frame = CGRectMake(0, 0, 44, 44);
+            [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+            [btn setImage:[UIImage imageNamed:@"back"] forState:0];
+            btn.imageEdgeInsets = UIEdgeInsetsMake(0, - 10, 0, 10);
+             UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+            vc.contentViewController.navigationItem.leftBarButtonItem = backItem;
+            
         }else{
           viewController.hidesBottomBarWhenPushed = YES; // 隐藏底部的工具条
         }
@@ -36,4 +45,8 @@
     
 }
 
+- (void)back
+{
+    [self popViewControllerAnimated:YES];
+}
 @end

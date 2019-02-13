@@ -49,5 +49,9 @@
 	<string>44444</string>
 	<key>NSContactsUsageDescription</key>
 	<string>申请通讯录权限</string>
+	<key>NSCameraUsageDescription</key>
+	<string>“乐享校长端”上传头像，需要申请访问相机权限</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>“乐享校长端”上传头像，需要申请访问相册权限</string>
 </dict>
 </plist>

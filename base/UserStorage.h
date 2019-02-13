@@ -43,6 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)removeUserData;
 
+- (void)saveUserDataWithValue:(id) Value
+                       forKey:(NSString *)key;
+
 @end
 
 NS_ASSUME_NONNULL_END

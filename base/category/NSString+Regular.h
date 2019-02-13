@@ -12,5 +12,6 @@
 
 @interface NSString (Regular)
 @property (nonatomic, assign, readonly) BOOL reg_isPhone;
+@property (nonatomic, assign, readonly) BOOL isEmpty;
 @end
 

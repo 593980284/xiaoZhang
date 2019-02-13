@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *codeTF;
 @property (weak, nonatomic) IBOutlet TimerBtn *codeBtn;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
+@property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 
 @property (nonatomic, copy) NSString *codeApi;
 @property (nonatomic, copy) NSString *commitApi;

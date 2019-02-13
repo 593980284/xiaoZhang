@@ -36,4 +36,19 @@
 //    }
 }
 
+- (void)alertWithTitle:(NSString *)title
+               message:(NSString *)message
+             sureTitle:(NSString *)sureTitle
+               handler:(void (^ __nullable)(UIAlertAction *action))handler
+{
+    UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction * cleanAction = [UIAlertAction actionWithTitle: sureTitle style:UIAlertActionStyleDefault handler:handler];
+    
+    UIAlertController * vc = [UIAlertController alertControllerWithTitle:title  message:message preferredStyle: UIAlertControllerStyleAlert];
+    [vc addAction:cancelAction];
+    [vc addAction:cleanAction];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 @end

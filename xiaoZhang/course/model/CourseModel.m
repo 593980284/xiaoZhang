@@ -7,7 +7,14 @@
 //
 
 #import "CourseModel.h"
-
+@implementation CourseListModel
++ (nullable NSDictionary<NSString *, id> *)modelContainerPropertyGenericClass
+{
+   return  @{@"list_1": @"CourseModel",
+             @"list_2": @"CourseModel",
+             @"list_3": @"CourseModel"
+             };
+}
+@end
 @implementation CourseModel
-
 @end

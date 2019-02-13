@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TestQualityVC : BaseVC
-
+//必填，yyyy-MM格式
 @end
 
 NS_ASSUME_NONNULL_END
