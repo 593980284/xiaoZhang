@@ -1,5 +1,4 @@
 PODS:
-  - AAChartKit (2.1.6)
   - AFNetworking (3.2.1):
     - AFNetworking/NSURLSession (= 3.2.1)
     - AFNetworking/Reachability (= 3.2.1)
@@ -15,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - BAPickView (1.1.4)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -48,8 +48,8 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - AAChartKit
   - AFNetworking
+  - BAPickView
   - BlocksKit
   - CBImagePicker
   - DZNEmptyDataSet
@@ -64,8 +64,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - AAChartKit
     - AFNetworking
+    - BAPickView
     - BlocksKit
     - CBImagePicker
     - DZNEmptyDataSet
@@ -80,8 +80,8 @@ SPEC REPOS:
     - YYKit
 
 SPEC CHECKSUMS:
-  AAChartKit: adc0da2830cfc7dd8e9a0a706413eec9598e004d
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BAPickView: dbabd31468df83df1b1e5f218e28a8a41908e000
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CBImagePicker: c5d844bc66e78f3de4790602022226c58fbc4b10
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -95,6 +95,6 @@ SPEC CHECKSUMS:
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: f485f8a9c2478d7affccb2add7e87a0d6592de0f
+PODFILE CHECKSUM: 3644feda6a65f1ee030ad02b70aa3431996f7691
 
 COCOAPODS: 1.5.3

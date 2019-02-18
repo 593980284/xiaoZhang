@@ -95,6 +95,7 @@
                                 }else{
                                     weakSelf.dataArr = [data mutableCopy];
                                     [weakSelf.tableView.mj_header endRefreshing];
+                                    [weakSelf.tableView.mj_footer resetNoMoreData];
                                 }
                                   [weakSelf.tableView reloadData];
                                 if (data.count == 0) {
@@ -119,7 +120,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,16 +128,17 @@
     CourseTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"CourseTableViewCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor clearColor];
     cell.contentView.backgroundColor = [UIColor clearColor];
-    cell.model = [CourseModel modelWithJSON:@{@"appointmentId": @"153",
-                                              @"subjectName": @"科目二",
-                                              @"shortPeriodTime": @"09:25-11:30",
-                                              @"maxNum":@"10",
-                                              @"appointmentNum": @"0",
-                                              @"noAppointmentNum": @"10",
-                                              @"coachName":@ "宝山",
-                                              @"coachPhoto": @"files/coachimg/20170426_152327198609190017B.jpg",
-                                              @"coachSex": @"男",
-                                              @"identity": @"132000"}];
+//    cell.model = [CourseModel modelWithJSON:@{@"appointmentId": @"153",
+//                                              @"subjectName": @"科目二",
+//                                              @"shortPeriodTime": @"09:25-11:30",
+//                                              @"maxNum":@"10",
+//                                              @"appointmentNum": @"0",
+//                                              @"noAppointmentNum": @"10",
+//                                              @"coachName":@ "宝山",
+//                                              @"coachPhoto": @"files/coachimg/20170426_152327198609190017B.jpg",
+//                                              @"coachSex": @"男",
+//                                              @"identity": @"132000"}];
+    cell.model = self.dataArr[indexPath.row];
     return cell;
 }
 
@@ -144,16 +146,17 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     CourseDetailVC *vc = [CourseDetailVC new];
-    vc.model = [CourseModel modelWithJSON:@{@"appointmentId": @"153",
-                                            @"subjectName": @"科目二",
-                                            @"shortPeriodTime": @"09:25-11:30",
-                                            @"maxNum":@"10",
-                                            @"appointmentNum": @"0",
-                                            @"noAppointmentNum": @"10",
-                                            @"coachName":@ "宝山",
-                                            @"coachPhoto": @"files/coachimg/20170426_152327198609190017B.jpg",
-                                            @"coachSex": @"男",
-                                            @"identity": @"132000"}];
+//    vc.model = [CourseModel modelWithJSON:@{@"appointmentId": @"153",
+//                                            @"subjectName": @"科目二",
+//                                            @"shortPeriodTime": @"09:25-11:30",
+//                                            @"maxNum":@"10",
+//                                            @"appointmentNum": @"0",
+//                                            @"noAppointmentNum": @"10",
+//                                            @"coachName":@ "宝山",
+//                                            @"coachPhoto": @"files/coachimg/20170426_152327198609190017B.jpg",
+//                                            @"coachSex": @"男",
+//                                            @"identity": @"132000"}];
+    vc.model = self.dataArr[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -42,7 +42,7 @@
         .heightIs(24)
         .widthIs(55);
         
-        NSArray *array = @[@"报名人数", @"在线约课", @"在线约课/取消人数", @"考试人数/合格人数"];
+        NSArray *array = @[@"报名人数", @"在线约考", @"在线约课/取消人数", @"考试人数/合格人数"];
         for (int i = 0; i < array.count; i++) {
             UILabel * subTitleLb = [UILabel new];
             subTitleLb.text = array[i];

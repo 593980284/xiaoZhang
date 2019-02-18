@@ -7,7 +7,6 @@ pod 'AFNetworking'
 pod 'SDCycleScrollView'
 pod 'MBProgressHUD'
 pod 'GKNavigationController'
-pod 'AAChartKit'
 pod 'SDAutoLayout'
 pod 'TPKeyboardAvoiding'
 pod 'DZNEmptyDataSet'
@@ -15,6 +14,7 @@ pod 'BlocksKit'
 pod 'CBImagePicker'
 pod 'MJRefresh'
 pod 'Masonry'
+pod 'BAPickView'
 end
 
 

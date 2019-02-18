@@ -8,8 +8,9 @@
 
 #ifndef Constant_h
 #define Constant_h
+#define HC_DEBUG YES
 //处于开发测试阶段
-#ifdef DEBUG
+#ifdef HC_DEBUG
 #define kBaseUrl @"http://111.39.245.156:8087/app/lexiang/"
 #define kBaseImageUrl @"http://111.39.245.156:8087/"
 //处于发布正式阶段

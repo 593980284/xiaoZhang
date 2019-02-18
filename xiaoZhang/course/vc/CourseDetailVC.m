@@ -63,7 +63,7 @@
     HC__weakSelf
     [NetWorkTool requestWithURL:CourseApi_courseDetail params:@{@"appointmentId": self.model.appointmentId} toModel:[CourseDetailModel class] success:^(CourseDetailModel * result) {
         weakSelf.courseDetailModel = result;
-        [weakSelf mockdata];
+//        [weakSelf mockdata];
         [weakSelf.tableView reloadData];
         [weakSelf reloadHeaderView];
         [weakSelf.tableView.mj_header endRefreshing];

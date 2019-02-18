@@ -56,7 +56,7 @@
 - (void)setCourseDetailModel:(CourseDetailModel *)courseDetailModel
 {
     _courseDetailModel = courseDetailModel;
-    _lbs[0].text = @"无字段";
+    _lbs[0].text = [[UserStorage shareInstance] getUserModel].schoolName;
     _lbs[1].text = courseDetailModel.subjectName;
     _lbs[2].text = courseDetailModel.carNo;
     _lbs[3].text = courseDetailModel.appointmentDate;

@@ -78,20 +78,22 @@
     
     if (status == CNAuthorizationStatusNotDetermined) {
         [store requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            //3.1 判断是否出错
-            if (error) {
-                //applyPermissionResult(NO);
-                return;
-            }
-            //3.2 判断是否授权
-            if (granted) {
-                complete(YES, YES);
-                NSLog(@"已经授权");
-                
-            } else {
-                NSLog(@"没有授权");
-                complete(NO, YES);
-            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //3.1 判断是否出错
+                if (error) {
+                    //applyPermissionResult(NO);
+                    return;
+                }
+                //3.2 判断是否授权
+                if (granted) {
+                    complete(YES, YES);
+                    NSLog(@"已经授权");
+                    
+                } else {
+                    NSLog(@"没有授权");
+                    complete(NO, YES);
+                }
+            });
         }];
     }else if(status == CNAuthorizationStatusAuthorized){
        complete(YES, NO);

@@ -63,9 +63,15 @@
         _timeLb.hcTextBlock(DetialColor_666, SystemFont(12), 0);
         
         _numLb = [UILabel new];
+        _numLb.lineBreakMode = NSLineBreakByTruncatingHead;
         _numLb.hcTextBlock(DetialColor_666, SystemFont(12), 0);
         [bgView sd_addSubviews:@[_headImgView, _sexImgView, _nameLb, _idImgView_1, _idImgView_2, _subjectNameLb, line1, _timeLb, line2, _numLb]];
-        
+        CGFloat pad = 10;
+        if(HC_windowWidth <= 320){
+            pad = 4;
+            _numLb.adjustsFontSizeToFitWidth = YES;
+        }
+        NSLog(@"%lf",HC_windowWidth );
         _headImgView.sd_layout
         .topSpaceToView(bgView, 8)
         .leftSpaceToView(bgView, 10)
@@ -104,28 +110,28 @@
         
         line1.sd_layout
         .centerYEqualToView(_subjectNameLb)
-        .leftSpaceToView(_subjectNameLb, 10)
+        .leftSpaceToView(_subjectNameLb, pad)
         .heightIs(8)
         .widthIs(1);
         
         _timeLb.sd_layout
         .heightIs(15)
-        .leftSpaceToView(line1, 10)
+        .leftSpaceToView(line1, pad)
         .bottomEqualToView(_headImgView);
         [_timeLb setSingleLineAutoResizeWithMaxWidth:300];
         
         line2.sd_layout
         .centerYEqualToView(_timeLb)
-        .leftSpaceToView(_timeLb, 10)
+        .leftSpaceToView(_timeLb, pad)
         .heightIs(8)
         .widthIs(1);
         
         _numLb.sd_layout
         .heightIs(15)
-        .leftSpaceToView(line2, 10)
-        .bottomEqualToView(_headImgView);
-        [_numLb setSingleLineAutoResizeWithMaxWidth:300];
-        
+        .leftSpaceToView(line2, pad)
+        .bottomEqualToView(_headImgView)
+        .rightSpaceToView(bgView, 0);
+      
     }
     return self;
 }

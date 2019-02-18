@@ -21,6 +21,7 @@
 #import "ToolMacro.h"//宏定义-屏幕宽高、s系统版本、phonex判断、等
 #import "NetWorkTool.h"//网络请求
 #import "UserStorage.h"//用户信息本地缓存
+#import "AAGlobalMacro.h"
 /** 分类*/
 #import "MBProgressHUD+PD.h"//提示框
 #import "NSString+Regular.h"//正则

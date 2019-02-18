@@ -16,9 +16,11 @@ NSString *const CYPinyinGroupCharArray = @"CYPinyinGroupCharArray";
 
 @interface AdressBookVC ()<UITableViewDelegate,UITableViewDataSource> {
     UITableView *_myTableView;
+    
 }
 @property(nonatomic, strong) NSMutableArray *addressBookArray;
 @property(nonatomic, strong) NSMutableArray *alphabetArray;
+@property(nonatomic, strong) UIButton *btn;
 
 @end
 
@@ -31,18 +33,33 @@ NSString *const CYPinyinGroupCharArray = @"CYPinyinGroupCharArray";
     _alphabetArray = [[NSMutableArray alloc] init];
     _addressBookArray = [[NSMutableArray alloc] init];
     [self setUI];
-    HC__weakSelf
-    [[ApplyPermission sharedInstance] applyPermissionWithPermissionType:ApplyPermissionTypeAddressBook complete:^(BOOL isAllow, BOOL isFirst) {
-        NSArray *array =  [AddressBookUtils getAllPeopleInfoToModel];
-        NSDictionary *dcit= [self sortObjectsAccordingToInitialWith:array SortKey:@"name"];
-        weakSelf.addressBookArray = dcit[CYPinyinGroupResultArray];//排好顺序的PersonModel数组
-        weakSelf.alphabetArray = dcit[CYPinyinGroupCharArray];//排好顺序的首字母数组
-        [_myTableView reloadData];
+    
+}
 
-    }];
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (self.addressBookArray.count == 0) {
+        HC__weakSelf
+        [[ApplyPermission sharedInstance] applyPermissionWithPermissionType:ApplyPermissionTypeAddressBook complete:^(BOOL isAllow, BOOL isFirst) {
+            if (isAllow) {
+                NSArray *array =  [AddressBookUtils getAllPeopleInfoToModel];
+                NSDictionary *dcit= [self sortObjectsAccordingToInitialWith:array SortKey:@"name"];
+                weakSelf.addressBookArray = dcit[CYPinyinGroupResultArray];//排好顺序的PersonModel数组
+                weakSelf.alphabetArray = dcit[CYPinyinGroupCharArray];//排好顺序的首字母数组
+                [_myTableView reloadData];
+                 weakSelf.btn.hidden = YES;
+            }else{
+                [MBProgressHUD showError:@"请在设置中打开通讯录权限" toView:weakSelf.view];
+                weakSelf.btn.hidden = NO;
+            }
+        }];
+    }
 }
 
 - (void)setUI {
+    
+    
     _myTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [_myTableView registerClass:[AddressBookCell class] forCellReuseIdentifier:@"myCellId"];
     _myTableView.dataSource = self;
@@ -50,8 +67,29 @@ NSString *const CYPinyinGroupCharArray = @"CYPinyinGroupCharArray";
     _myTableView.tableFooterView = [UIView new];
     [self.view addSubview:_myTableView];
     _myTableView.sd_layout
-    .spaceToSuperView(UIEdgeInsetsMake(HC_naviHeight, 0, 0, 0));
+    .spaceToSuperView(UIEdgeInsetsMake(HC_naviHeight, 0, HC_tabBarHeight, 0));
+    
+    UIButton *btn = [UIButton new];
+    btn.hcTapBlock(self, @selector(gotoSet:))
+    .hcNomalTextBlock(TitleColor_333, @"去打开通讯录权限", SystemFont(14));
+    
+    [self.view addSubview:btn];
+    btn.sd_layout
+    .centerXEqualToView(self.view)
+    .centerYEqualToView(self.view)
+    .heightIs(30)
+    .widthIs(120);
+    
+    btn.hidden = YES;
+    self.btn = btn;
+    
+}
 
+- (void)gotoSet:(UIButton *)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:^(BOOL success) {
+        
+    }];
 }
 
 #pragma mark - 字母排列

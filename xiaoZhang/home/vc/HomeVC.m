@@ -13,7 +13,9 @@
 #import "HomeTopView.h"
 #import "HomeFormView.h"
 #import "TestQualityVC.h"
-@interface HomeVC ()<UIScrollViewDelegate> 
+#import "RegisterNumVC.h"
+#import "AppointmentNumVC.h"
+@interface HomeVC ()<UIScrollViewDelegate>
 @property(nonatomic, weak)UILabel *label;
 @property(nonatomic, strong)HomeModel *model;
 @property(nonatomic, weak)UIScrollView *scrollView;
@@ -72,7 +74,7 @@
     self.todayView.values = @[[NSString stringWithFormat:@"%ld", model.signUpTodayCount],
                               [NSString stringWithFormat:@"%ld", model.appointTodayCount],
                               [NSString stringWithFormat:@"%ld/%ld", model.appointTodayCount,model.appointTodayCancelCount],
-                              [NSString stringWithFormat:@"0/0没有字段"]
+                              @"暂无数据统计"
                               ];
     self.monthView.values = @[[NSString stringWithFormat:@"%ld", model.signUpMonthCount],
                               [NSString stringWithFormat:@"%ld", model.appointMonthCount],
@@ -89,7 +91,7 @@
     }else{
         self.navBarAlpha = 0;
     }
-        
+    
 }
 
 - (void)setUI
@@ -109,7 +111,7 @@
     scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getData)];
     [self.view addSubview:scrollView];
     scrollView.sd_layout
-    .spaceToSuperView(UIEdgeInsetsMake(0, 0, 0, 0));
+    .spaceToSuperView(UIEdgeInsetsMake(0, 0, HC_tabBarHeight, 0));
     self.scrollView = scrollView;
     
     self.topView = [[HomeTopView alloc]initWithTitles:@[@"本日新增学员(人)",@"昨日新增学员(人)"]];
@@ -134,11 +136,37 @@
     .sd_layout.topSpaceToView(self.todayView, 15)
     .leftSpaceToView(scrollView, 20)
     .rightSpaceToView(scrollView, 20);
-    
+    HC__weakSelf
     self.todayView.tapBlock = ^(NSInteger index) {
         switch (index) {
             case 0:
-                {}
+            {
+                RegisterNumVC *vc = [RegisterNumVC new];
+                vc.startDate = [NSDate new];
+                vc.endDate = [NSDate new];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+                
+            }
+                break;
+            case 1:
+            {
+            }
+                break;
+            case 2:
+            {
+                AppointmentNumVC*vc = [AppointmentNumVC new];
+                vc.startDate = [NSDate new];
+                vc.endDate = [NSDate new];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+                
+            }
+                break;
+            case 3:
+            {
+                TestQualityVC *vc = [TestQualityVC new];
+                vc.date = [NSDate new];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            }
                 break;
                 
             default:
@@ -149,23 +177,50 @@
     self.monthView.tapBlock = ^(NSInteger index) {
         switch (index) {
             case 0:
-            {}
+            {
+                RegisterNumVC *vc = [RegisterNumVC new];
+                vc.startDate = [NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-01",[NSDate new].year,[NSDate new].month] format:@"yyyy-MM-dd"];
+                vc.endDate = [NSDate new];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+            case 1:
+            {
+            }
+                break;
+            case 2:
+            {
+                AppointmentNumVC*vc = [AppointmentNumVC new];
+                vc.startDate = [NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-01",[NSDate new].year,[NSDate new].month] format:@"yyyy-MM-dd"];
+                vc.endDate = [NSDate new];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+                
+            }
+                break;
+            case 3:
+            {
+                TestQualityVC *vc = [TestQualityVC new];
+                vc.date = [NSDate new];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            }
                 break;
                 
             default:
                 break;
         }
     };
+    
+    [self.scrollView setupAutoContentSizeWithBottomView:self.monthView bottomMargin:10];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
