@@ -27,8 +27,11 @@
         
         manager.requestSerializer.timeoutInterval = kTimeOutInterval;
         
+        [manager.requestSerializer setHTTPShouldHandleCookies:YES];
+        
         [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
         
+        [self loadCookies];
         
     });
     
@@ -43,9 +46,14 @@
                failure:(AFErrorBlock)errorBlock
            showLoading:(NSString *)showLoading
 {
+   NSString * phone = [[UserStorage shareInstance] getUserModel].phone;
+    if (phone) {
+        [[self manager].requestSerializer setValue: phone
+    forHTTPHeaderField:@"JSESSIONID"];
+    }
     NSArray<NSString *> * arr = [url componentsSeparatedByString:@"@"];
     NSString * URL = [NSString stringWithFormat:@"%@%@",kBaseUrl,arr.firstObject];
-    if ([[arr.lastObject capitalizedString] isEqualToString:@"GET"]) {
+    if ([[arr.lastObject uppercaseString] isEqualToString:@"GET"]) {
         [self GETWithURL:URL params:parmas toModel:modelClass success:successBlock failure:errorBlock showLoading:showLoading];
     }else{
         [self POSTWithURL:URL params:parmas toModel:modelClass success:successBlock failure:errorBlock showLoading:showLoading];
@@ -67,6 +75,7 @@
         if (showLoading) {
             [hub hideAnimated:YES];
         }
+       [self saveCookies];
         NSInteger code = [responseObject[@"flg"] integerValue];
         switch (code) {
             case 1:
@@ -127,6 +136,7 @@
         if (showLoading) {
             [hub hideAnimated:YES];
         }
+        [self saveCookies];
         NSInteger code = [responseObject[@"flg"] integerValue];
         NSLog(@"================%@请求=====================\n\n%@\n\n",url,parmas);
         switch (code) {
@@ -172,4 +182,27 @@
     }];
 }
 
+
+//保存Cookie
++ (void)saveCookies
+{
+    NSData*cookiesData = [NSKeyedArchiver archivedDataWithRootObject:[[NSHTTPCookieStorage sharedHTTPCookieStorage]cookies]];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:cookiesData forKey:@"org.skyfox.cookie"];
+    [defaults synchronize];
+}
+
+//保存Cookie
+ //加载Cookie 一般都是app刚刚启动的时候
++ (void)loadCookies
+{
+    NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"org.skyfox.cookie"]];
+    
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    
+    for (NSHTTPCookie *cookie  in cookies) {
+        [cookieStorage setCookie:cookie];
+    }
+}
 @end

@@ -8,16 +8,16 @@
 
 #ifndef Constant_h
 #define Constant_h
-#define HC_DEBUG YES
+//#define HC_DEBUG YES
 //处于开发测试阶段
-#ifdef HC_DEBUG
-#define kBaseUrl @"http://111.39.245.156:8087/app/lexiang/"
-#define kBaseImageUrl @"http://111.39.245.156:8087/"
-//处于发布正式阶段
-#else
+//#ifdef HC_DEBUG
+//#define kBaseUrl @"http://111.39.245.156:8087/app/lexiang/"
+//#define kBaseImageUrl @"http://111.39.245.156:8087/"
+////处于发布正式阶段
+//#else
 #define kBaseUrl @"http://112.2.0.75:9001/app/lexiang/"
 #define kBaseImageUrl @"http://112.2.0.75:9001/"
-#endif
+//#endif
 
 #define HexColor(x)  [UIColor colorWithHexString:x]
 #define SystemFont(x)  [UIFont systemFontOfSize:x]

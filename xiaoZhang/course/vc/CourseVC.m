@@ -189,7 +189,7 @@
         .rightSpaceToView(self.view, 0)
         .heightIs(120);
         
-        SelectView *selectView = [[SelectView alloc]initWithData:@[@"实操",@"理论",@"其他"]];
+        SelectView *selectView = [[SelectView alloc]initWithData:@[@"理论",@"实操",@"其他"]];
         selectView.backgroundColor = [UIColor whiteColor];
         selectView.block = ^(NSInteger index) {
             weakSelf.type = index;

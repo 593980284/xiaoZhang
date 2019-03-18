@@ -47,7 +47,7 @@
     //取上次登录的手机号
     passwordView.phoneTF.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"userPhone"];
     passwordView.codeApi = LoginApi_Code;
-    passwordView.commitApi = LoginApi_testLogin;
+    passwordView.commitApi = LoginApi_login;
     HC__weakSelf;
     passwordView.finishBlock = ^(NSDictionary *data) {
         [[UserStorage shareInstance] saveUserData:data];

@@ -17,7 +17,9 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>3</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
@@ -26,14 +28,8 @@
 	<string>“乐享校长端”上传头像，需要申请访问相机权限</string>
 	<key>NSContactsUsageDescription</key>
 	<string>申请通讯录权限，已便于联系自己的学员</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>22222</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>11111</string>
-	<key>NSLocationUsageDescription</key>
-	<string>3333</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>44444</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>“乐享校长端”上传头像，需要申请访问相册权限</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

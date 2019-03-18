@@ -72,12 +72,14 @@
                             [NSString stringWithFormat:@"%ld", model.signUpYesterdayCount]
                             ];
     self.todayView.values = @[[NSString stringWithFormat:@"%ld", model.signUpTodayCount],
-                              [NSString stringWithFormat:@"%ld", model.appointTodayCount],
+                               @"",
+//                              [NSString stringWithFormat:@"%ld", model.appointTodayCount],
                               [NSString stringWithFormat:@"%ld/%ld", model.appointTodayCount,model.appointTodayCancelCount],
                               @"暂无数据统计"
                               ];
     self.monthView.values = @[[NSString stringWithFormat:@"%ld", model.signUpMonthCount],
-                              [NSString stringWithFormat:@"%ld", model.appointMonthCount],
+//                              [NSString stringWithFormat:@"%ld", model.appointMonthCount],
+                               @"",
                               [NSString stringWithFormat:@"%ld/%ld", model.appointMonthCount,model.appointMonthCancelCount],
                               [NSString stringWithFormat:@"%ld/%ld", model.examCount,model.examPass]
                               ];
